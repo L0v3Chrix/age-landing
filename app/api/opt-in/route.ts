@@ -15,14 +15,25 @@ export async function POST(request: Request) {
     );
   }
 
-  const webhookUrl = process.env.WEBHOOK_URL;
-  if (webhookUrl) {
-    await fetch(webhookUrl, {
+  const timestamp = new Date().toLocaleString("en-US", {
+    timeZone: "America/Chicago",
+    dateStyle: "short",
+    timeStyle: "short",
+  });
+
+  // Fire Discord webhook instantly
+  const discordWebhook = process.env.DISCORD_WEBHOOK_URL;
+  if (discordWebhook) {
+    await fetch(discordWebhook, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ firstName, phone, email }),
+      body: JSON.stringify({
+        content: `🔥 **NEW AGE LEAD**\n**Name:** ${firstName}\n**Phone:** ${phone}\n**Email:** ${email || "not provided"}\n**Time:** ${timestamp} CT`,
+      }),
     });
   }
+
+  console.log(`[LEAD] ${timestamp} | ${firstName} | ${phone} | ${email || "no email"}`);
 
   return NextResponse.json({ success: true });
 }
