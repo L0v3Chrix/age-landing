@@ -27,8 +27,6 @@ const agents = [
   { name: "Integrations", file: "integrations-avatar.png" },
 ];
 
-const ticker = "· AI OUTREACH · VOICE CALLS · CALENDAR BOOKING · CONTENT · SEO · LEAD NURTURING · 24/7 OPS · ZERO OVERHEAD · NO EMPLOYEES · NO AGENCY ·";
-
 export default function Home() {
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({ firstName: "", phone: "" });
@@ -49,130 +47,110 @@ export default function Home() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { font-size: 16px; }
-        body { background: #080808; color: #fff; font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.85)} }
-        @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-        @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-        @keyframes modalIn { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
-        .dot { width:9px;height:9px;border-radius:50%;background:#ef4444;display:inline-block;animation:pulse 1.3s infinite;margin-right:7px;flex-shrink:0; }
-        .ticker-wrap { overflow:hidden;white-space:nowrap;background:#0f0f0f;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a; }
-        .ticker-inner { display:inline-block;padding:12px 0;animation:ticker 22s linear infinite; }
-        .cta-btn { background:linear-gradient(135deg,#7c3aed 0%,#6d28d9 100%);border:none;border-radius:12px;color:#f59e0b;cursor:pointer;font-size:18px;font-weight:800;letter-spacing:0.02em;padding:18px 36px;display:inline-block;transition:transform 0.15s,opacity 0.15s;width:100%;max-width:360px; }
-        .cta-btn:hover { transform:translateY(-2px);opacity:0.92; }
-        .cta-btn:active { transform:translateY(0); }
-        input { background:rgba(255,255,255,0.07);border:1.5px solid rgba(255,255,255,0.1);border-radius:10px;color:#fff;font-size:16px;font-family:inherit;padding:14px 16px;width:100%;outline:none;transition:border 0.2s; }
-        input:focus { border-color:rgba(124,58,237,0.8);background:rgba(124,58,237,0.08); }
-        input::placeholder { color:#444; }
-        .submit-btn { background:linear-gradient(135deg,#7c3aed,#6d28d9);border:none;border-radius:10px;color:#f59e0b;cursor:pointer;font-size:17px;font-weight:800;font-family:inherit;padding:16px;width:100%;transition:opacity 0.2s; }
-        .submit-btn:hover { opacity:0.88; }
-        .submit-btn:disabled { opacity:0.45;cursor:not-allowed; }
-        .agent-grid { display:grid;grid-template-columns:repeat(11,1fr);gap:10px; }
-        @media(max-width:700px) { .agent-grid{grid-template-columns:repeat(6,1fr)} }
-        @media(max-width:420px) { .agent-grid{grid-template-columns:repeat(4,1fr)} }
-        .agent { display:flex;flex-direction:column;align-items:center;gap:4px;cursor:default; }
-        .agent img { border-radius:50%;border:2px solid transparent;transition:border-color 0.2s,box-shadow 0.2s; }
-        .agent:hover img { border-color:#7c3aed;box-shadow:0 0 14px rgba(124,58,237,0.5); }
-        .agent span { font-size:9px;color:#444;text-align:center;line-height:1.2; }
-        @media(max-width:700px) {
-          .hero-h1 { font-size: 42px !important; }
-          .hero-sub { font-size: 17px !important; }
-        }
-        @media(max-width:420px) {
-          .hero-h1 { font-size: 34px !important; }
+        body { background: #0d0d0f; color: #e8e8e8; font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+        @keyframes modalIn { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+        .dot { width:8px;height:8px;border-radius:50%;background:#ef4444;display:inline-block;flex-shrink:0;animation:pulse 1.4s infinite; }
+
+        .cta { display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#f59e0b;color:#0d0d0f;font-size:17px;font-weight:800;font-family:inherit;letter-spacing:-0.01em;padding:17px 32px;border-radius:10px;border:none;cursor:pointer;transition:transform 0.15s,background 0.15s;width:100%;max-width:340px; }
+        .cta:hover { transform:translateY(-2px);background:#fbbf24; }
+        .cta:active { transform:translateY(0); }
+
+        input { background:#1a1a1f;border:1.5px solid #2a2a32;border-radius:10px;color:#fff;font-size:16px;font-family:inherit;padding:15px 16px;width:100%;outline:none;transition:border-color 0.2s,background 0.2s; }
+        input:focus { border-color:#f59e0b;background:#1e1e24; }
+        input::placeholder { color:#3a3a44; }
+
+        .submit { background:#f59e0b;border:none;border-radius:10px;color:#0d0d0f;cursor:pointer;font-size:17px;font-weight:800;font-family:inherit;padding:17px;width:100%;transition:opacity 0.2s; }
+        .submit:hover { opacity:0.88; }
+        .submit:disabled { opacity:0.4;cursor:not-allowed; }
+
+        .agent img { border-radius:50%;transition:box-shadow 0.2s; }
+        .agent:hover img { box-shadow:0 0 0 2px #f59e0b; }
+
+        @media(max-width:600px) {
+          .h1 { font-size: 38px !important; line-height: 1.1 !important; }
+          .sub { font-size: 17px !important; }
+          .section-pad { padding: 56px 20px !important; }
+          .agent-grid { grid-template-columns: repeat(5,1fr) !important; }
         }
       `}</style>
 
+      {/* ── NAV ── */}
+      <nav style={{padding:"22px 28px",display:"flex",justifyContent:"space-between",alignItems:"center",borderBottom:"1px solid #16161c"}}>
+        <span style={{fontSize:14,fontWeight:900,letterSpacing:"0.2em",color:"#fff"}}>AGE</span>
+        <div style={{display:"flex",alignItems:"center",gap:8}}>
+          <span className="dot" />
+          <span style={{fontSize:12,color:"#555",letterSpacing:"0.06em"}}>COHORT 3 — 3 SPOTS</span>
+        </div>
+      </nav>
+
       {/* ── HERO ── */}
-      <section style={{position:"relative",minHeight:"100svh",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center",overflow:"hidden"}}>
+      <section style={{padding:"72px 24px 80px",maxWidth:720,margin:"0 auto",textAlign:"center",animation:"fadeUp 0.7s ease both"}}>
 
-        {/* Background image */}
-        <div style={{position:"absolute",inset:0,zIndex:0}}>
-          <Image
-            src="/assets/gate-hero.png"
-            alt=""
-            fill
-            priority
-            style={{objectFit:"cover",objectPosition:"60% center"}}
-          />
-          {/* Gradient: lighter at top for readability, darker bottom */}
-          <div style={{position:"absolute",inset:0,background:"linear-gradient(180deg, rgba(8,8,8,0.7) 0%, rgba(8,8,8,0.5) 40%, rgba(8,8,8,0.85) 80%, #080808 100%)"}} />
-        </div>
+        <p style={{fontSize:12,fontWeight:600,letterSpacing:"0.14em",color:"#f59e0b",marginBottom:24}}>
+          AGENT GROWTH ENGINE
+        </p>
 
-        {/* Nav */}
-        <div style={{position:"absolute",top:0,left:0,right:0,zIndex:10,padding:"20px 28px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-          <span style={{fontSize:15,fontWeight:900,letterSpacing:"0.18em",color:"#fff"}}>AGE</span>
-          <span style={{fontSize:11,color:"rgba(255,255,255,0.4)",letterSpacing:"0.1em",display:"none"}}>22 AGENTS · 5 DIVISIONS</span>
-        </div>
+        <h1 className="h1" style={{fontSize:58,fontWeight:900,lineHeight:1.06,letterSpacing:"-0.03em",color:"#fff",marginBottom:24}}>
+          Your business running<br />
+          the way you always<br />
+          <span style={{color:"#f59e0b"}}>imagined it.</span>
+        </h1>
 
-        {/* Main content */}
-        <div style={{position:"relative",zIndex:10,padding:"100px 24px 60px",maxWidth:600,animation:"fadeUp 0.8s ease both"}}>
+        <p className="sub" style={{fontSize:19,color:"#888",lineHeight:1.65,maxWidth:520,margin:"0 auto 16px"}}>
+          No friction. No headache. No army of employees or $5k/month agencies eating your margin.
+        </p>
 
-          {/* Badge */}
-          <div style={{display:"inline-flex",alignItems:"center",background:"rgba(239,68,68,0.12)",border:"1px solid rgba(239,68,68,0.3)",borderRadius:100,padding:"6px 16px",fontSize:12,fontWeight:700,letterSpacing:"0.08em",color:"#fca5a5",marginBottom:28}}>
-            <span className="dot" />
-            COHORT 3 — 3 SPOTS REMAINING
-          </div>
+        <p style={{fontSize:17,color:"#666",lineHeight:1.65,maxWidth:480,margin:"0 auto 44px"}}>
+          We're builders. We've been in this space a long time. We know what's coming — and we're taking some people with us.
+        </p>
 
-          {/* Headline */}
-          <h1 className="hero-h1" style={{fontSize:56,fontWeight:900,lineHeight:1.08,letterSpacing:"-0.025em",marginBottom:20,color:"#fff"}}>
-            You don't need<br />
-            more people.<br />
-            <span style={{color:"#f59e0b"}}>You need a fleet.</span>
-          </h1>
+        <button className="cta" onClick={() => setOpen(true)}>
+          Let's See If We're a Fit →
+        </button>
 
-          {/* Sub */}
-          <p className="hero-sub" style={{fontSize:19,color:"rgba(255,255,255,0.65)",lineHeight:1.6,marginBottom:36,maxWidth:480,margin:"0 auto 36px"}}>
-            22 AI agents. 5 divisions. 90 days to a business that runs without you.
-          </p>
-
-          {/* CTA — opens modal */}
-          <button className="cta-btn" onClick={()=>setOpen(true)}>
-            Begin Application →
-          </button>
-
-          <p style={{marginTop:14,fontSize:12,color:"rgba(255,255,255,0.25)"}}>
-            No pitch decks. No agencies. Just a real conversation. 😈
-          </p>
-        </div>
+        <p style={{marginTop:16,fontSize:12,color:"#333"}}>
+          We're selective. Not everyone gets in. That's not a pitch — it's just true.
+        </p>
       </section>
 
-      {/* ── TICKER ── */}
-      <div className="ticker-wrap">
-        <div className="ticker-inner">
-          <span style={{fontSize:12,fontWeight:600,letterSpacing:"0.14em",color:"#7c3aed"}}>{ticker}{ticker}{ticker}</span>
-        </div>
-      </div>
+      {/* ── DIVIDER ── */}
+      <div style={{borderTop:"1px solid #16161c",maxWidth:640,margin:"0 auto"}} />
 
-      {/* ── COPY BREAK ── */}
-      <section style={{padding:"60px 24px",textAlign:"center"}}>
-        <div style={{maxWidth:580,margin:"0 auto"}}>
-          <p style={{fontSize:"clamp(22px,3.5vw,32px)",fontWeight:800,lineHeight:1.4,color:"#fff",marginBottom:12}}>
-            "Most people will think <em style={{fontStyle:"normal",color:"rgba(255,255,255,0.4)"}}>'that's wild'</em> and go back to doing everything themselves."
-          </p>
-          <p style={{fontSize:18,color:"#f59e0b",fontWeight:700}}>The ones who don't? They're in Cohort 2 right now.</p>
-          <button className="cta-btn" onClick={()=>setOpen(true)} style={{marginTop:32,fontSize:16,padding:"16px 32px"}}>
-            Begin Application →
-          </button>
-        </div>
+      {/* ── MIDDLE COPY ── */}
+      <section className="section-pad" style={{padding:"72px 24px",maxWidth:620,margin:"0 auto",textAlign:"center"}}>
+        <p style={{fontSize:"clamp(24px,3.5vw,34px)",fontWeight:800,lineHeight:1.4,color:"#fff",letterSpacing:"-0.02em",marginBottom:20}}>
+          "Most people will think about it,<br />
+          <span style={{color:"#555"}}>and go back to doing everything themselves."</span>
+        </p>
+        <p style={{fontSize:17,color:"#f59e0b",fontWeight:600}}>
+          The ones who don't? They're already in.
+        </p>
       </section>
 
       {/* ── FLEET ── */}
-      <section style={{padding:"48px 24px 64px",maxWidth:820,margin:"0 auto"}}>
-        <p style={{fontSize:11,color:"rgba(255,255,255,0.25)",letterSpacing:"0.12em",marginBottom:24,textAlign:"center",fontWeight:600}}>YOUR TEAM — DEPLOYED DAY ONE</p>
-        <div className="agent-grid">
-          {agents.map(a=>(
-            <div key={a.name} className="agent">
-              <Image src={`/assets/agents/${a.file}`} alt={a.name} width={56} height={56} style={{borderRadius:"50%"}} />
-              <span>{a.name}</span>
+      <section style={{padding:"16px 24px 80px",maxWidth:800,margin:"0 auto"}}>
+        <p style={{fontSize:11,color:"#333",letterSpacing:"0.14em",fontWeight:600,textAlign:"center",marginBottom:24}}>
+          YOUR TEAM — 22 SPECIALISTS — DAY ONE
+        </p>
+        <div className="agent-grid" style={{display:"grid",gridTemplateColumns:"repeat(11,1fr)",gap:"14px 10px"}}>
+          {agents.map(a => (
+            <div key={a.name} className="agent" style={{display:"flex",flexDirection:"column",alignItems:"center",gap:5}}>
+              <Image src={`/assets/agents/${a.file}`} alt={a.name} width={54} height={54} style={{borderRadius:"50%"}} />
+              <span style={{fontSize:9,color:"#3a3a44",textAlign:"center",lineHeight:1.2}}>{a.name}</span>
             </div>
           ))}
         </div>
-        <div style={{textAlign:"center",marginTop:40}}>
-          <button className="cta-btn" onClick={()=>setOpen(true)} style={{fontSize:16,padding:"16px 32px"}}>
-            Begin Application →
+
+        <div style={{textAlign:"center",marginTop:48}}>
+          <button className="cta" onClick={() => setOpen(true)}>
+            Let's See If We're a Fit →
           </button>
         </div>
       </section>
@@ -180,24 +158,27 @@ export default function Home() {
       {/* ── MODAL ── */}
       {open && (
         <div
-          onClick={e=>{if(e.target===e.currentTarget)setOpen(false)}}
-          style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.85)",zIndex:1000,display:"flex",alignItems:"flex-end",justifyContent:"center",padding:"0 0 0"}}
+          onClick={e => { if (e.target === e.currentTarget) setOpen(false); }}
+          style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.75)",zIndex:1000,display:"flex",alignItems:"flex-end",justifyContent:"center",backdropFilter:"blur(4px)"}}
         >
-          <div style={{background:"#111",borderRadius:"20px 20px 0 0",padding:"36px 28px 48px",width:"100%",maxWidth:480,animation:"modalIn 0.3s ease",borderTop:"1px solid rgba(124,58,237,0.3)"}}>
-            {/* Close */}
-            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:24}}>
+          <div style={{background:"#13131a",borderRadius:"20px 20px 0 0",padding:"32px 28px 48px",width:"100%",maxWidth:460,animation:"modalIn 0.28s ease",borderTop:"1px solid #2a2a35"}}>
+
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:28}}>
               <div>
-                <p style={{fontSize:20,fontWeight:800}}>Begin Application</p>
-                <p style={{fontSize:13,color:"rgba(255,255,255,0.4)",marginTop:2}}>3 spots left in Cohort 3</p>
+                <p style={{fontSize:22,fontWeight:800,color:"#fff",letterSpacing:"-0.02em"}}>Start the conversation.</p>
+                <p style={{fontSize:13,color:"#555",marginTop:4}}>3 spots left. No pitch. Just a real talk.</p>
               </div>
-              <button onClick={()=>setOpen(false)} style={{background:"rgba(255,255,255,0.08)",border:"none",color:"#fff",width:36,height:36,borderRadius:"50%",cursor:"pointer",fontSize:18,display:"flex",alignItems:"center",justifyContent:"center"}}>✕</button>
+              <button
+                onClick={() => setOpen(false)}
+                style={{background:"#1e1e28",border:"none",color:"#666",width:34,height:34,borderRadius:"50%",cursor:"pointer",fontSize:16,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}
+              >✕</button>
             </div>
 
             <form onSubmit={submit} style={{display:"flex",flexDirection:"column",gap:12}}>
               <input
                 placeholder="First Name"
                 value={form.firstName}
-                onChange={e=>setForm(f=>({...f,firstName:e.target.value}))}
+                onChange={e => setForm(f => ({...f, firstName: e.target.value}))}
                 required
                 autoFocus
               />
@@ -205,14 +186,15 @@ export default function Home() {
                 placeholder="Phone Number"
                 type="tel"
                 value={form.phone}
-                onChange={e=>setForm(f=>({...f,phone:e.target.value}))}
+                onChange={e => setForm(f => ({...f, phone: e.target.value}))}
                 required
               />
-              <button className="submit-btn" type="submit" disabled={loading}>
-                {loading ? "Sending you in..." : "Submit Application →"}
+              <button className="submit" type="submit" disabled={loading}>
+                {loading ? "Sending..." : "I'm In →"}
               </button>
             </form>
-            <p style={{marginTop:12,fontSize:11,color:"rgba(255,255,255,0.2)",textAlign:"center",lineHeight:1.5}}>
+
+            <p style={{marginTop:14,fontSize:11,color:"#2a2a35",textAlign:"center"}}>
               No spam. You'll hear from us within 24 hours.
             </p>
           </div>
