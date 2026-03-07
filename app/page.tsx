@@ -3,6 +3,21 @@
 import { useState } from "react";
 import Image from "next/image";
 
+const TICKER_ITEMS = [
+  "AI OUTREACH",
+  "VOICE CALLS IN YOUR VOICE",
+  "CALENDAR BOOKING",
+  "CONTENT CREATION",
+  "SEO",
+  "LEAD NURTURING",
+  "STRATEGY",
+  "24/7 OPERATIONS",
+  "ZERO OVERHEAD",
+  "NO EMPLOYEES",
+  "NO AGENCY",
+];
+const TICKER = TICKER_ITEMS.map((t) => `· ${t} `).join("");
+
 const agents = [
   { file: "daniel-avatar.png", name: "Daniel" },
   { file: "aria-growth-avatar.png", name: "Aria" },
@@ -28,39 +43,8 @@ const agents = [
   { file: "integrations-avatar.png", name: "Integrations" },
 ];
 
-const particles = [
-  { top: "8%", left: "15%", size: 3, delay: 0 },
-  { top: "12%", left: "82%", size: 2, delay: 1.2 },
-  { top: "20%", left: "45%", size: 4, delay: 0.5 },
-  { top: "25%", left: "10%", size: 2, delay: 2.1 },
-  { top: "18%", left: "70%", size: 3, delay: 0.8 },
-  { top: "35%", left: "25%", size: 2, delay: 1.5 },
-  { top: "40%", left: "60%", size: 5, delay: 0.3 },
-  { top: "30%", left: "90%", size: 2, delay: 1.8 },
-  { top: "45%", left: "5%", size: 3, delay: 2.5 },
-  { top: "50%", left: "50%", size: 2, delay: 0.7 },
-  { top: "55%", left: "78%", size: 4, delay: 1.1 },
-  { top: "15%", left: "35%", size: 2, delay: 2.8 },
-  { top: "60%", left: "20%", size: 3, delay: 0.4 },
-  { top: "65%", left: "88%", size: 2, delay: 1.6 },
-  { top: "70%", left: "42%", size: 3, delay: 2.2 },
-  { top: "22%", left: "55%", size: 2, delay: 0.9 },
-  { top: "38%", left: "75%", size: 4, delay: 1.3 },
-  { top: "48%", left: "30%", size: 2, delay: 2.6 },
-  { top: "75%", left: "12%", size: 3, delay: 0.6 },
-  { top: "80%", left: "65%", size: 2, delay: 1.9 },
-  { top: "10%", left: "95%", size: 3, delay: 2.4 },
-  { top: "42%", left: "8%", size: 2, delay: 0.2 },
-  { top: "58%", left: "52%", size: 3, delay: 1.7 },
-  { top: "85%", left: "38%", size: 2, delay: 2.9 },
-  { top: "33%", left: "48%", size: 4, delay: 0.1 },
-];
-
-const TICKER =
-  "AI OUTREACH \u00b7 VOICE CALLS \u00b7 CALENDAR BOOKING \u00b7 CONTENT CREATION \u00b7 SEO \u00b7 LEAD NURTURING \u00b7 STRATEGY \u00b7 24/7 OPERATIONS \u00b7 ZERO OVERHEAD \u00b7 ";
-
 export default function Home() {
-  const [form, setForm] = useState({ firstName: "", phone: "", email: "" });
+  const [form, setForm] = useState({ firstName: "", phone: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -79,7 +63,6 @@ export default function Home() {
         body: JSON.stringify({
           firstName: form.firstName.trim(),
           phone: form.phone.trim(),
-          email: form.email.trim() || undefined,
         }),
       });
       window.location.href = "https://age-v5.vercel.app";
@@ -91,193 +74,189 @@ export default function Home() {
 
   return (
     <>
-      {/* ===== SECTION 1 — HERO ===== */}
-      <section className="relative min-h-screen flex flex-col justify-end items-center overflow-hidden">
+      {/* ===== HERO — ABOVE THE FOLD ===== */}
+      <section className="relative h-screen flex flex-col overflow-hidden" style={{ background: "#080808" }}>
+        {/* Background image */}
         <Image
-          src="/assets/hero-commander.png"
-          alt="Commander of the AI fleet"
+          src="/assets/gate-hero.png"
+          alt=""
           fill
           className="object-cover object-center"
           sizes="100vw"
           priority
         />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 z-[1]" style={{ background: "rgba(0,0,0,0.75)" }} />
 
-        {/* Gradient overlay */}
-        <div
-          className="absolute inset-0 z-10"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(10,10,10,0.15) 0%, rgba(10,10,10,0.4) 40%, rgba(10,10,10,0.85) 75%, #0a0a0a 100%)",
-          }}
-        />
-
-        {/* Particle field */}
-        <div className="absolute inset-0 z-[15] pointer-events-none">
-          {particles.map((p, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full"
-              style={{
-                top: p.top,
-                left: p.left,
-                width: p.size,
-                height: p.size,
-                background: "#7c3aed",
-                boxShadow: "0 0 8px 3px rgba(124,58,237,0.4)",
-                animation: `particle-glow ${3 + p.delay}s ease-in-out infinite`,
-                animationDelay: `${p.delay}s`,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* AGE wordmark */}
-        <div className="absolute top-6 left-6 z-20">
-          <span
-            className="text-sm font-bold"
-            style={{ color: "#7c3aed", letterSpacing: "0.25em" }}
-          >
+        {/* Top bar */}
+        <div className="relative z-10 flex items-center justify-between px-6 py-5">
+          <span className="text-sm font-bold tracking-[0.25em]" style={{ color: "#7c3aed" }}>
             AGE
+          </span>
+          <span className="hidden sm:block text-xs" style={{ color: "#6b7280" }}>
+            22 Agents · 5 Divisions · 90 Days
           </span>
         </div>
 
-        {/* Hero content */}
-        <div className="relative z-20 text-center px-6 pb-12 md:pb-20 max-w-3xl mx-auto">
-          {/* Enrollment badge */}
+        {/* Center content */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6">
+          {/* Pill badge */}
           <div
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-8"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6"
             style={{
-              background: "rgba(124,58,237,0.12)",
-              border: "1px solid rgba(124,58,237,0.3)",
+              background: "rgba(239,68,68,0.08)",
+              border: "1px solid rgba(239,68,68,0.25)",
             }}
           >
             <span
               className="inline-block w-2 h-2 rounded-full"
-              style={{
-                background: "#ef4444",
-                animation: "pulse-red 2s ease-in-out infinite",
-              }}
+              style={{ background: "#ef4444", animation: "pulse-red 1.5s ease-in-out infinite" }}
             />
-            <span
-              className="text-xs font-semibold uppercase"
-              style={{ color: "#a78bfa", letterSpacing: "0.14em" }}
-            >
-              Cohort 3 — Limited Enrollment
+            <span className="text-xs font-semibold" style={{ color: "#f87171" }}>
+              ⚡ 3 spots remaining in Cohort 3
             </span>
           </div>
 
+          {/* H1 */}
           <h1
-            className="font-extrabold text-white mb-5"
-            style={{
-              fontSize: "clamp(2.5rem, 7vw, 5rem)",
-              lineHeight: 1.05,
-              letterSpacing: "-0.02em",
-            }}
+            className="text-center font-extrabold mb-4"
+            style={{ fontSize: "clamp(2.2rem, 6vw, 4.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
           >
-            You don&apos;t need more people.
+            <span className="text-white">Your competitors just hired</span>
             <br />
-            You need a fleet.
+            <span className="text-white">22 people. </span>
+            <span style={{ color: "#f59e0b" }}>Zero salaries.</span>
           </h1>
 
+          {/* Subhead */}
           <p
-            className="mb-10"
-            style={{
-              fontSize: "clamp(1rem, 2.2vw, 1.25rem)",
-              color: "#9ca3af",
-              lineHeight: 1.6,
-            }}
+            className="text-center max-w-xl mb-8"
+            style={{ fontSize: "clamp(0.95rem, 2vw, 1.125rem)", color: "#9ca3af", lineHeight: 1.6 }}
           >
-            22 AI agents. One mission. Your business — fully deployed in 90
-            days.
+            AGE deploys a full AI workforce around your business in 90 days.
+            Growth. Creative. Operations. Strategy. Command. All of it.
           </p>
 
-          <a
-            href="#proof"
-            className="inline-block text-2xl"
-            style={{
-              color: "rgba(255,255,255,0.35)",
-              animation: "bounce-down 2s ease-in-out infinite",
-            }}
-            aria-label="Scroll down"
-          >
-            ↓
-          </a>
+          {/* FORM */}
+          <form onSubmit={handleSubmit} className="w-full max-w-[440px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+              <input
+                type="text"
+                placeholder="First Name"
+                value={form.firstName}
+                onChange={(e) => setForm((f) => ({ ...f, firstName: e.target.value }))}
+                required
+                className="w-full px-4 py-3.5 rounded-lg text-white text-[15px] outline-none transition-all placeholder:text-white/25"
+                style={{
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                }}
+                onFocus={(e) => (e.target.style.borderColor = "rgba(124,58,237,0.6)")}
+                onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                value={form.phone}
+                onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
+                required
+                className="w-full px-4 py-3.5 rounded-lg text-white text-[15px] outline-none transition-all placeholder:text-white/25"
+                style={{
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                }}
+                onFocus={(e) => (e.target.style.borderColor = "rgba(124,58,237,0.6)")}
+                onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
+              />
+            </div>
+
+            {error && <p className="text-sm mb-2" style={{ color: "#f87171" }}>{error}</p>}
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-4 rounded-lg font-bold tracking-wide transition-all cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
+              style={{
+                background: loading ? "#4c1d95" : "linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)",
+                border: "none",
+                color: "#f59e0b",
+                fontSize: 16,
+              }}
+              onMouseEnter={(e) => {
+                if (!loading) (e.currentTarget.style.transform = "translateY(-1px)");
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              {loading ? "Sending you in..." : "See If You Qualify →"}
+            </button>
+          </form>
+
+          {/* Microcopy */}
+          <p className="text-center mt-4 text-xs max-w-[440px]" style={{ color: "#4b5563", lineHeight: 1.5 }}>
+            No pitch decks. No agencies. Just a real conversation — probably
+            from an AI that sounds exactly like me. 😈
+          </p>
         </div>
       </section>
 
-      {/* ===== SECTION 2 — PROOF STRIP ===== */}
+      {/* ===== SECTION 2 — TICKER ===== */}
       <section
-        id="proof"
-        className="relative overflow-hidden py-4"
-        style={{
-          background: "#0a0a0a",
-          borderTop: "1px solid rgba(124,58,237,0.15)",
-          borderBottom: "1px solid rgba(124,58,237,0.15)",
-        }}
+        className="relative overflow-hidden"
+        style={{ height: 40, background: "#111", lineHeight: "40px" }}
       >
         <div
           className="flex whitespace-nowrap"
-          style={{
-            animation: "ticker-scroll 15s linear infinite",
-            width: "max-content",
-          }}
+          style={{ animation: "ticker-scroll 20s linear infinite", width: "max-content" }}
         >
-          <span
-            className="text-sm md:text-base font-bold uppercase"
-            style={{ color: "#7c3aed", letterSpacing: "0.15em" }}
-          >
+          <span className="text-xs font-bold uppercase text-white" style={{ letterSpacing: "0.12em" }}>
             {TICKER}
           </span>
-          <span
-            className="text-sm md:text-base font-bold uppercase"
-            style={{ color: "#7c3aed", letterSpacing: "0.15em" }}
-          >
+          <span className="text-xs font-bold uppercase text-white" style={{ letterSpacing: "0.12em" }}>
             {TICKER}
           </span>
         </div>
       </section>
 
-      {/* ===== SECTION 3 — THE HOOK ===== */}
-      <section
-        className="py-24 md:py-36 px-6 text-center"
-        style={{ background: "#0a0a0a" }}
-      >
-        <p
-          className="font-bold max-w-2xl mx-auto mb-6"
-          style={{
-            fontSize: "clamp(1.5rem, 4vw, 2.75rem)",
-            lineHeight: 1.25,
-          }}
-        >
-          <span style={{ color: "#6b7280" }}>While you read this,</span>
-          <br />
-          <span className="text-white">
-            someone else is deploying their fleet.
-          </span>
-        </p>
-        <p className="text-sm" style={{ color: "#6b7280" }}>
-          There are{" "}
-          <span className="text-white font-semibold">3 spots left</span> in
-          Cohort 3.
-        </p>
+      {/* ===== SECTION 3 — COPY BREAK ===== */}
+      <section className="py-16 px-6 text-center" style={{ background: "#080808" }}>
+        <blockquote className="max-w-2xl mx-auto">
+          <p
+            className="font-bold italic mb-4"
+            style={{
+              fontSize: "clamp(1.3rem, 3.5vw, 2.25rem)",
+              lineHeight: 1.3,
+              color: "#9ca3af",
+            }}
+          >
+            &ldquo;Most people will read this page, think{" "}
+            <span className="not-italic text-white">that&apos;s wild,</span>{" "}
+            and go back to doing everything themselves.&rdquo;
+          </p>
+          <p className="text-sm" style={{ color: "#6b7280" }}>
+            The ones who don&apos;t?{" "}
+            <span className="text-white font-semibold">They&apos;re in Cohort 2 right now.</span>
+          </p>
+        </blockquote>
       </section>
 
       {/* ===== SECTION 4 — THE FLEET ===== */}
-      <section className="py-20 md:py-28 px-6" style={{ background: "#0a0a0a" }}>
+      <section className="py-20 px-6" style={{ background: "#080808" }}>
         <div className="max-w-5xl mx-auto">
           <h2
-            className="text-center text-white font-bold mb-14"
-            style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)" }}
+            className="text-center text-white font-bold mb-4"
+            style={{ fontSize: "clamp(1.4rem, 3.5vw, 2.25rem)" }}
           >
-            Meet your team.
+            Your fleet. Their job titles.
           </h2>
+          <p className="text-center text-sm mb-14" style={{ color: "#6b7280" }}>
+            22 agents across 5 divisions — deployed around your business in 90 days.
+          </p>
 
           <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-11 gap-4 md:gap-5 justify-items-center">
             {agents.map((agent) => (
-              <div
-                key={agent.file}
-                className="agent-card flex flex-col items-center gap-1.5 cursor-default"
-              >
+              <div key={agent.file} className="agent-card flex flex-col items-center gap-1.5 cursor-default">
                 <div className="agent-glow w-12 h-12 md:w-16 md:h-16 relative rounded-full overflow-hidden">
                   <Image
                     src={`/assets/agents/${agent.file}`}
@@ -287,10 +266,7 @@ export default function Home() {
                     sizes="64px"
                   />
                 </div>
-                <span
-                  className="text-[10px] md:text-xs font-medium text-center leading-tight"
-                  style={{ color: "#9ca3af" }}
-                >
+                <span className="text-[10px] md:text-xs font-medium text-center leading-tight" style={{ color: "#9ca3af" }}>
                   {agent.name}
                 </span>
               </div>
@@ -299,137 +275,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== SECTION 5 — THE APPLICATION ===== */}
-      <section
-        id="apply"
-        className="relative py-24 md:py-32 px-6 flex items-center justify-center"
-        style={{ minHeight: "80vh" }}
-      >
-        <Image
-          src="/assets/operator-hero.png"
-          alt=""
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-
-        {/* Dark overlay */}
-        <div
-          className="absolute inset-0 z-10"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.85) 50%, rgba(10,10,10,0.95) 100%)",
-          }}
-        />
-
-        <div className="relative z-20 w-full max-w-md mx-auto text-center">
-          <h2
-            className="text-white font-extrabold mb-3"
-            style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
-          >
-            See If You Qualify
-          </h2>
-          <p className="text-sm mb-8" style={{ color: "#9ca3af" }}>
-            We review every application personally.
+      {/* ===== SECTION 5 — BOTTOM CTA ===== */}
+      <section className="py-20 px-6 text-center" style={{ background: "#080808" }}>
+        <div className="max-w-md mx-auto">
+          <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "#7c3aed" }}>
+            Still here?
           </p>
-
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-            <input
-              type="text"
-              placeholder="First Name *"
-              value={form.firstName}
-              onChange={(e) =>
-                setForm((f) => ({ ...f, firstName: e.target.value }))
-              }
-              required
-              className="w-full px-4 py-3.5 rounded-xl text-white text-[15px] outline-none transition-colors placeholder:text-white/30"
-              style={{
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(255,255,255,0.1)",
-              }}
-              onFocus={(e) =>
-                (e.target.style.borderColor = "rgba(124,58,237,0.6)")
-              }
-              onBlur={(e) =>
-                (e.target.style.borderColor = "rgba(255,255,255,0.1)")
-              }
-            />
-            <input
-              type="tel"
-              placeholder="Phone Number *"
-              value={form.phone}
-              onChange={(e) =>
-                setForm((f) => ({ ...f, phone: e.target.value }))
-              }
-              required
-              className="w-full px-4 py-3.5 rounded-xl text-white text-[15px] outline-none transition-colors placeholder:text-white/30"
-              style={{
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(255,255,255,0.1)",
-              }}
-              onFocus={(e) =>
-                (e.target.style.borderColor = "rgba(124,58,237,0.6)")
-              }
-              onBlur={(e) =>
-                (e.target.style.borderColor = "rgba(255,255,255,0.1)")
-              }
-            />
-            <input
-              type="email"
-              placeholder="Email (optional)"
-              value={form.email}
-              onChange={(e) =>
-                setForm((f) => ({ ...f, email: e.target.value }))
-              }
-              className="w-full px-4 py-3.5 rounded-xl text-white text-[15px] outline-none transition-colors placeholder:text-white/30"
-              style={{
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(255,255,255,0.1)",
-              }}
-              onFocus={(e) =>
-                (e.target.style.borderColor = "rgba(124,58,237,0.6)")
-              }
-              onBlur={(e) =>
-                (e.target.style.borderColor = "rgba(255,255,255,0.1)")
-              }
-            />
-
-            {error && (
-              <p className="text-sm m-0" style={{ color: "#f87171" }}>
-                {error}
-              </p>
-            )}
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-4 rounded-xl font-bold tracking-wide transition-all cursor-pointer disabled:cursor-not-allowed"
-              style={{
-                background: loading
-                  ? "#4c1d95"
-                  : "linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)",
-                border: "none",
-                color: "#f59e0b",
-                fontSize: 17,
-              }}
-              onMouseEnter={(e) => {
-                if (!loading)
-                  (e.target as HTMLButtonElement).style.opacity = "0.9";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLButtonElement).style.opacity = "1";
-              }}
-            >
-              {loading ? "Sending you in..." : "Apply Now \u2192"}
-            </button>
-          </form>
-
-          <p
-            className="mt-5 text-xs leading-relaxed"
-            style={{ color: "#4b5563" }}
+          <h2
+            className="text-white font-extrabold mb-6"
+            style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)", lineHeight: 1.15 }}
           >
-            No spam. No pitch decks. Just a real conversation — possibly from an
-            AI that sounds exactly like Chrix. 😈
+            While you&apos;re reading,
+            <br />
+            <span style={{ color: "#f59e0b" }}>someone else is deploying.</span>
+          </h2>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="inline-block w-full max-w-sm py-4 rounded-lg font-bold tracking-wide transition-all"
+            style={{
+              background: "linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)",
+              color: "#f59e0b",
+              fontSize: 16,
+              textDecoration: "none",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-1px)")}
+            onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+          >
+            See If You Qualify →
+          </a>
+          <p className="mt-4 text-xs" style={{ color: "#4b5563" }}>
+            3 spots left in Cohort 3. We&apos;re not saying that to be cute.
           </p>
         </div>
       </section>

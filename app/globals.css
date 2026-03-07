@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg-dark: #0a0a0a;
+  --color-bg-dark: #080808;
   --color-purple: #7c3aed;
   --color-gold: #f59e0b;
   --color-light: #f8f8f0;
@@ -13,33 +13,21 @@ html {
 }
 
 body {
-  background: #0a0a0a;
+  background: #080808;
   color: #ededed;
   overflow-x: hidden;
 }
 
-/* Pulsing red dot on enrollment badge */
+/* Pulsing red dot */
 @keyframes pulse-red {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
 
-/* Infinite horizontal ticker scroll */
+/* Infinite horizontal ticker */
 @keyframes ticker-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
-
-/* Bouncing scroll indicator */
-@keyframes bounce-down {
-  0%, 100% { transform: translateY(0); opacity: 0.4; }
-  50% { transform: translateY(10px); opacity: 1; }
-}
-
-/* Particle glow pulse */
-@keyframes particle-glow {
-  0%, 100% { opacity: 0.15; }
-  50% { opacity: 0.6; }
 }
 
 /* Agent avatar hover glow */

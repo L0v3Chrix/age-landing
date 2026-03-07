@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AGE — You Don't Need More People. You Need a Fleet.",
-  description: "22 AI agents. 5 divisions. 90 days to a business that runs without you.",
+  title: "AGE — Your Competitors Just Hired 22 People. Zero Salaries.",
+  description: "AGE deploys a full AI workforce around your business in 90 days. Growth. Creative. Operations. Strategy. Command. All of it.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
