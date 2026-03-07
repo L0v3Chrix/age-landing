@@ -9,6 +9,7 @@ export default function Home() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { background: #080608; color: #fff; font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.2} }
+        @keyframes orbPulse { 0%,100%{filter:brightness(1) drop-shadow(0 0 12px rgba(245,158,11,0.5))} 50%{filter:brightness(1.4) drop-shadow(0 0 28px rgba(245,158,11,0.9))} }
         @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
         .dot { width:8px;height:8px;border-radius:50%;background:#ef4444;display:inline-block;flex-shrink:0;animation:pulse 1.5s infinite; }
         .cta { display:inline-flex;align-items:center;justify-content:center;background:#f59e0b;color:#080608;font-size:18px;font-weight:900;font-family:inherit;letter-spacing:-0.01em;padding:18px 40px;border-radius:10px;text-decoration:none;transition:transform 0.15s,background 0.15s; }
@@ -73,7 +74,7 @@ export default function Home() {
 
       {/* DIVIDER */}
       <div style={{borderTop:"1px solid #1a1a1a",borderBottom:"1px solid #1a1a1a",padding:"48px 28px",textAlign:"center",background:"#0c0a0c"}}>
-        <div style={{width:72,height:72,margin:"0 auto 28px",position:"relative"}}>
+        <div style={{width:80,height:80,margin:"0 auto 28px",position:"relative",animation:"orbPulse 2s ease-in-out infinite"}}>
           <Image src="/assets/orb-graphic.png" alt="" fill style={{objectFit:"contain"}} />
         </div>
         <p style={{fontSize:"clamp(22px,3.5vw,30px)",fontWeight:900,lineHeight:1.4,color:"#fff",letterSpacing:"-0.025em",maxWidth:500,margin:"0 auto"}}>
