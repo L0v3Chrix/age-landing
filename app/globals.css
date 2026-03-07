@@ -8,7 +8,45 @@
   --font-sans: var(--font-inter);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--color-bg-dark);
+  background: #0a0a0a;
   color: #ededed;
+  overflow-x: hidden;
+}
+
+/* Pulsing red dot on enrollment badge */
+@keyframes pulse-red {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Infinite horizontal ticker scroll */
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Bouncing scroll indicator */
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(10px); opacity: 1; }
+}
+
+/* Particle glow pulse */
+@keyframes particle-glow {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.6; }
+}
+
+/* Agent avatar hover glow */
+.agent-card .agent-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.agent-card:hover .agent-glow {
+  box-shadow: 0 0 20px 6px rgba(124, 58, 237, 0.4);
 }
