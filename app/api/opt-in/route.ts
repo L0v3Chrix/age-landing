@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        content: `🔥 **NEW AGE LEAD**\n**Name:** ${firstName}\n**Phone:** ${phone}\n**Email:** ${email || "not provided"}\n**Time:** ${timestamp} CT`,
+        content: `<@1477450523509784587> 🔥 **NEW AGE LEAD**\n**Name:** ${firstName}\n**Phone:** ${phone}\n**Email:** ${email || "not provided"}\n**Time:** ${timestamp} CT`,
       }),
     });
   }
