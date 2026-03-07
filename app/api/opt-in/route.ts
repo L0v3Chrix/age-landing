@@ -33,6 +33,16 @@ export async function POST(request: Request) {
     });
   }
 
+  // Trigger SOP engine via OpenClaw system event
+  const ocWebhook = process.env.OC_LEAD_WEBHOOK;
+  if (ocWebhook) {
+    fetch(ocWebhook, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "new_lead", firstName, phone, email }),
+    }).catch(() => {});
+  }
+
   console.log(`[LEAD] ${timestamp} | ${firstName} | ${phone} | ${email || "no email"}`);
 
   return NextResponse.json({ success: true });
