@@ -32,24 +32,24 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section style={{position:"relative",minHeight:"100svh",display:"flex",flexDirection:"column",background:"#080608"}}>
-        <div style={{position:"absolute",top:0,left:0,right:0,height:"65%",zIndex:0}}>
-          <Image src="/assets/gate-hero.png" alt="" fill priority style={{objectFit:"cover",objectPosition:"center 30%"}} />
-          <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom,rgba(8,6,8,0.1) 0%,rgba(8,6,8,0) 25%,rgba(8,6,8,1) 100%)"}} />
+      <section style={{position:"relative",minHeight:"100svh",display:"flex",alignItems:"center",background:"#080608"}}>
+        <div style={{position:"absolute",inset:0,zIndex:0}}>
+          <Image src="/assets/gate-hero.png" alt="" fill priority style={{objectFit:"cover",objectPosition:"center 35%"}} />
+          <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom,rgba(8,6,8,0.55) 0%,rgba(8,6,8,0.45) 40%,rgba(8,6,8,0.88) 80%,#080608 100%)"}} />
         </div>
-        <div style={{position:"relative",zIndex:10,marginTop:"auto",padding:"0 24px 44px",maxWidth:640,animation:"fadeUp 0.75s ease both"}}>
+        <div style={{position:"relative",zIndex:10,padding:"80px 24px 48px",maxWidth:640,width:"100%",animation:"fadeUp 0.75s ease both"}}>
           <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:14}}>AGENT GENESIS ENGINE</p>
           <h1 className="h1" style={{fontSize:52,fontWeight:900,lineHeight:1.07,letterSpacing:"-0.03em",color:"#fff",marginBottom:16}}>
             We hatch the agents<br />your business<br /><span style={{color:"#f59e0b"}}>actually needs.</span>
           </h1>
-          <p className="sub" style={{fontSize:18,color:"rgba(255,255,255,0.5)",lineHeight:1.55,maxWidth:480,marginBottom:10}}>
+          <p className="sub" style={{fontSize:18,color:"#fff",lineHeight:1.55,maxWidth:480,marginBottom:10,fontWeight:600}}>
             Not a pre-packaged team. Not a tool. Not an agency.
           </p>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.75)",fontWeight:500,lineHeight:1.6,maxWidth:480,marginBottom:28}}>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.82)",lineHeight:1.6,maxWidth:480,marginBottom:28}}>
             You tell us about your business. We build your agents from scratch — custom-hatched, context-engineered, leveled for how you work.
           </p>
           <a className="cta" href="/apply">Start Your Genesis →</a>
-          <p style={{marginTop:10,fontSize:12,color:"#2a2a2a"}}>We're selective. You'll hear from us within 24 hours.</p>
+          <p style={{marginTop:10,fontSize:12,color:"rgba(255,255,255,0.25)"}}>We're selective. You'll hear from us within 24 hours.</p>
         </div>
       </section>
 
@@ -66,7 +66,7 @@ export default function Home() {
             <span style={{fontSize:10,fontWeight:900,color:"#f59e0b",letterSpacing:"0.1em",minWidth:22,paddingTop:4}}>{s.n}</span>
             <div>
               <p style={{fontSize:16,fontWeight:800,color:"#fff",marginBottom:3,letterSpacing:"-0.01em"}}>{s.title}</p>
-              <p style={{fontSize:13,color:"#555",lineHeight:1.65}}>{s.body}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.5)",lineHeight:1.65}}>{s.body}</p>
             </div>
           </div>
         ))}
@@ -95,7 +95,7 @@ export default function Home() {
           <p style={{fontSize:"clamp(26px,4vw,38px)",fontWeight:900,lineHeight:1.1,letterSpacing:"-0.025em",color:"#fff",marginBottom:12}}>
             You're exactly who<br />we built this for.
           </p>
-          <p style={{fontSize:15,color:"rgba(255,255,255,0.45)",marginBottom:28,lineHeight:1.6}}>
+          <p style={{fontSize:15,color:"rgba(255,255,255,0.65)",marginBottom:28,lineHeight:1.6}}>
             Builders. Owners. People who've been waiting for the real thing.
           </p>
           <a className="cta" href="/apply" style={{display:"flex",maxWidth:340,margin:"0 auto"}}>
