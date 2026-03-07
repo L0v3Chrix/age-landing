@@ -114,7 +114,7 @@ export default function Home() {
               <input placeholder="First Name" value={form.firstName} onChange={e=>setForm(f=>({...f,firstName:e.target.value}))} required />
               <input placeholder="Phone Number" type="tel" value={form.phone} onChange={e=>setForm(f=>({...f,phone:e.target.value}))} required />
             </div>
-            <button className="btn" disabled={loading}>{loading ? "Sending you in..." : "See If You Qualify →"}</button>
+            <button className="btn" disabled={loading}>{loading ? "Sending you in..." : "Begin Application →"}</button>
           </form>
 
           <p style={{marginTop:10,fontSize:11,color:"#3f3f3f",lineHeight:1.5}}>
@@ -163,7 +163,7 @@ export default function Home() {
             <input placeholder="First Name" value={form.firstName} onChange={e=>setForm(f=>({...f,firstName:e.target.value}))} required />
             <input placeholder="Phone Number" type="tel" value={form.phone} onChange={e=>setForm(f=>({...f,phone:e.target.value}))} required />
           </div>
-          <button className="btn" disabled={loading}>{loading ? "Sending you in..." : "Apply Now →"}</button>
+          <button className="btn" disabled={loading}>{loading ? "Sending you in..." : "Begin Application →"}</button>
         </form>
       </section>
     </>
