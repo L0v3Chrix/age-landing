@@ -71,27 +71,26 @@ export default function Home() {
         ))}
       </section>
 
-      {/* CUSTOM GRAPHIC DIVIDER */}
-      <div style={{borderTop:"1px solid #141418",borderBottom:"1px solid #141418",padding:"40px 28px",textAlign:"center",background:"#0c0a0c"}}>
-        <div style={{width:64,height:64,margin:"0 auto 24px",position:"relative"}}>
+      {/* DIVIDER */}
+      <div style={{borderTop:"1px solid #1a1a1a",borderBottom:"1px solid #1a1a1a",padding:"48px 28px",textAlign:"center",background:"#0c0a0c"}}>
+        <div style={{width:72,height:72,margin:"0 auto 28px",position:"relative"}}>
           <Image src="/assets/orb-graphic.png" alt="" fill style={{objectFit:"contain"}} />
         </div>
-        <p style={{fontSize:"clamp(20px,3vw,26px)",fontWeight:800,lineHeight:1.45,color:"#fff",letterSpacing:"-0.02em",maxWidth:480,margin:"0 auto"}}>
-          "Most people will read this, think{" "}
-          <em style={{fontStyle:"italic",color:"rgba(255,255,255,0.35)"}}>that's interesting</em>
-          {" "}— and go back to doing everything themselves."
+        <p style={{fontSize:"clamp(22px,3.5vw,30px)",fontWeight:900,lineHeight:1.4,color:"#fff",letterSpacing:"-0.025em",maxWidth:500,margin:"0 auto"}}>
+          Cars drive themselves now.
         </p>
-        <p style={{marginTop:14,fontSize:15,color:"#f59e0b",fontWeight:700}}>The ones who don't? They're already inside.</p>
+        <p style={{fontSize:"clamp(22px,3.5vw,30px)",fontWeight:900,lineHeight:1.4,color:"#f59e0b",letterSpacing:"-0.025em",maxWidth:500,margin:"4px auto 0"}}>
+          Why is your business still manual?
+        </p>
       </div>
 
       {/* FINAL CTA */}
       <section style={{padding:"52px 28px 80px",textAlign:"center"}}>
         <div style={{maxWidth:440,margin:"0 auto"}}>
-          <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.14em",color:"#2e2e2e",marginBottom:16}}>IF YOU'VE READ THIS FAR</p>
-          <p style={{fontSize:"clamp(28px,4vw,38px)",fontWeight:900,lineHeight:1.12,letterSpacing:"-0.025em",color:"#fff",marginBottom:10}}>
+          <p style={{fontSize:"clamp(28px,4vw,40px)",fontWeight:900,lineHeight:1.1,letterSpacing:"-0.025em",color:"#fff",marginBottom:14}}>
             You're exactly who<br />we built this for.
           </p>
-          <p style={{fontSize:15,color:"#444",marginBottom:32,lineHeight:1.6}}>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.5)",marginBottom:36,lineHeight:1.6}}>
             Builders. Owners. People who've been waiting for the real thing.
           </p>
           <a className="cta" href="/apply" style={{display:"flex",maxWidth:340,margin:"0 auto"}}>
