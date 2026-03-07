@@ -98,8 +98,8 @@ export default function Home() {
         <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.18em",color:"#f59e0b",marginBottom:32}}>THE PROTOCOL</p>
 
         {[
-          { n:"01", title:"Tell Us Your Story", body:"The interview. You tell us about your business, your gaps, your vision. No forms — a real conversation." },
-          { n:"02", title:"We Design Your Team", body:"From your transcript, we identify exactly which agents your operation needs. Custom roster. Built for you and no one else." },
+          { n:"01", title:"Tell Us Your Story", body:"No forms. A real conversation about your business, your gaps, and where you want to go." },
+          { n:"02", title:"We Design Your Team", body:"We map exactly which agents your operation needs. Custom roster, built for your business and no one else's." },
           { n:"03", title:"The Hatching Protocol", body:"Your agents are spawned, context-engineered, and begin leveling. They learn your business from the inside out." },
           { n:"04", title:"Autonomous in 90 Days", body:"Front end and back end of your business, running without you having to run it. The way you always imagined." },
         ].map(step => (
