@@ -58,11 +58,11 @@ export default function OfferPage() {
           <span className="live-dot" />
           <span style={{fontSize:12,fontWeight:700,letterSpacing:"0.16em",color:"#22c55e"}}>YOUR GENESIS HAS BEGUN</span>
         </div>
-        <h1 className="hero-h1" style={{fontSize:46,fontWeight:900,lineHeight:1.06,letterSpacing:"-0.035em",color:"#fff",marginBottom:20}}>
+        <h1 className="hero-h1" style={{fontSize:48,fontWeight:900,lineHeight:1.06,letterSpacing:"-0.035em",color:"#fff",marginBottom:20}}>
           Check your texts.<br />
           <span style={{color:"#f59e0b"}}>Your interview<br />just started.</span>
         </h1>
-        <p style={{fontSize:18,color:"rgba(255,255,255,0.88)",lineHeight:1.72,marginBottom:14}}>
+        <p style={{fontSize:19,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:14}}>
           This isn't a form. What you're texting right now gets turned into a blueprint. Every answer tightens what we build. The more specific you are, the more dangerous what we hand you back will be.
         </p>
         <p style={{fontSize:18,color:"rgba(255,255,255,0.72)",lineHeight:1.72,marginBottom:32}}>
@@ -72,7 +72,7 @@ export default function OfferPage() {
           <span style={{fontSize:32,flexShrink:0}}>📱</span>
           <div>
             <p style={{fontSize:17,fontWeight:800,color:"#fff",marginBottom:8}}>Keep this page open while you text us back.</p>
-            <p style={{fontSize:15,color:"rgba(255,255,255,0.75)",lineHeight:1.65}}>Scroll between replies. What's below will answer every question you're about to have — before you even think to ask it.</p>
+            <p style={{fontSize:16,color:"rgba(255,255,255,0.85)",lineHeight:1.65}}>Scroll between replies. What's below will answer every question you're about to have — before you even think to ask it.</p>
           </div>
         </div>
       </section>
@@ -87,10 +87,10 @@ export default function OfferPage() {
       {/* ── WHAT'S HAPPENING ── */}
       <section style={{padding:"60px 24px",maxWidth:660,margin:"0 auto"}}>
         <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:22}}>HERE'S WHAT'S HAPPENING RIGHT NOW</p>
-        <h2 className="sec-h2" style={{fontSize:36,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:14,lineHeight:1.12}}>
+        <h2 className="sec-h2" style={{fontSize:40,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:14,lineHeight:1.12}}>
           Three things are about<br />to happen in sequence.
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.75)",lineHeight:1.7,marginBottom:36}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.85)",lineHeight:1.7,marginBottom:36}}>
           Not on a timeline. Not on a call. Right now, in this text thread. Here's the exact path from where you are to where you're going.
         </p>
 
@@ -132,7 +132,7 @@ export default function OfferPage() {
       {/* ── 1.5-YEAR TRUTH ── */}
       <section style={{padding:"60px 24px",maxWidth:820,margin:"0 auto"}}>
         <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:18,textAlign:"center"}}>THE HONEST MATH</p>
-        <h2 className="sec-h2" style={{fontSize:36,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:16,lineHeight:1.12,textAlign:"center"}}>
+        <h2 className="sec-h2" style={{fontSize:40,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:16,lineHeight:1.12,textAlign:"center"}}>
           You could figure this out<br />without us. Here's what that looks like.
         </h2>
         <p style={{fontSize:17,color:"rgba(255,255,255,0.82)",lineHeight:1.72,maxWidth:560,margin:"0 auto 40px",textAlign:"center"}}>
@@ -155,12 +155,12 @@ export default function OfferPage() {
                 <div>
                   <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.35)",letterSpacing:"0.06em",marginBottom:3}}>{t.month.toUpperCase()}</p>
                   <p style={{fontSize:15,fontWeight:700,color:"rgba(255,255,255,0.5)"}}>{t.label}</p>
-                  <p style={{fontSize:13,color:"rgba(255,255,255,0.35)",marginTop:2,fontStyle:"italic"}}>{t.sub}</p>
+                  <p style={{fontSize:14,color:"rgba(255,255,255,0.52)",marginTop:2,fontStyle:"italic"}}>{t.sub}</p>
                 </div>
               </div>
             ))}
             <div style={{marginTop:20,paddingTop:16,borderTop:"1px solid #1a1a1a"}}>
-              <p style={{fontSize:14,color:"rgba(255,255,255,0.38)",lineHeight:1.65}}>Total: 18 months. Maybe a working system. Definitely a lot of money spent finding out what doesn't work.</p>
+              <p style={{fontSize:15,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>Total: 18 months. Maybe a working system. Definitely a lot of money spent finding out what doesn't work.</p>
             </div>
           </div>
 
@@ -175,12 +175,12 @@ export default function OfferPage() {
                 <div>
                   <p style={{fontSize:11,fontWeight:700,color:"rgba(245,158,11,0.7)",letterSpacing:"0.06em",marginBottom:3}}>{t.week.toUpperCase()}</p>
                   <p style={{fontSize:15,fontWeight:700,color:"#fff"}}>{t.label}</p>
-                  <p style={{fontSize:13,color:"rgba(255,255,255,0.6)",marginTop:2}}>{t.sub}</p>
+                  <p style={{fontSize:14,color:"rgba(255,255,255,0.72)",marginTop:2}}>{t.sub}</p>
                 </div>
               </div>
             ))}
             <div style={{marginTop:20,paddingTop:16,borderTop:"1px solid rgba(245,158,11,0.15)"}}>
-              <p style={{fontSize:14,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>Total: 90 days. A real team. Running without you at the center of everything.</p>
+              <p style={{fontSize:15,color:"rgba(255,255,255,0.88)",lineHeight:1.65}}>Total: 90 days. A real team. Running without you at the center of everything.</p>
             </div>
           </div>
         </div>
@@ -191,13 +191,13 @@ export default function OfferPage() {
       {/* ── WHY THE QUESTIONS ── */}
       <section style={{padding:"60px 24px",maxWidth:660,margin:"0 auto"}}>
         <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:22}}>WHY WE ASK WHAT WE ASK</p>
-        <h2 className="sec-h2" style={{fontSize:36,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:18,lineHeight:1.12}}>
+        <h2 className="sec-h2" style={{fontSize:40,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:18,lineHeight:1.12}}>
           We're not collecting your info.<br />We're running a diagnostic.
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.85)",lineHeight:1.72,marginBottom:12}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:12}}>
           Every question exists because it maps directly to a decision we're about to make about your build. Nothing gets asked that doesn't feed the blueprint.
         </p>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.72)",lineHeight:1.72,marginBottom:32}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.82)",lineHeight:1.72,marginBottom:32}}>
           The thing that frustrates you most? That's where the first agent lives. The thing that's already failed? That's the first guardrail we build around. Give us shallow answers, we build shallow agents. Give us the truth, we build something that hits.
         </p>
         <div className="two-col" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
@@ -208,7 +208,7 @@ export default function OfferPage() {
             {q:"What's already failed?",           a:"Tells us exactly what NOT to touch."},
           ].map((item,i) => (
             <div key={i} style={{background:"#0c0a0c",border:"1px solid #1e1c1e",borderRadius:12,padding:"18px"}}>
-              <p style={{fontSize:14,color:"rgba(255,255,255,0.45)",marginBottom:10,fontStyle:"italic",lineHeight:1.5}}>"{item.q}"</p>
+              <p style={{fontSize:15,color:"rgba(255,255,255,0.62)",marginBottom:10,fontStyle:"italic",lineHeight:1.5}}>"{item.q}"</p>
               <p style={{fontSize:15,fontWeight:700,color:"rgba(255,255,255,0.92)",lineHeight:1.5}}>{item.a}</p>
             </div>
           ))}
@@ -223,10 +223,10 @@ export default function OfferPage() {
       {/* ── THE JOURNEY ── */}
       <section style={{padding:"60px 24px",maxWidth:660,margin:"0 auto"}}>
         <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:22}}>WHERE THIS LEADS</p>
-        <h2 className="sec-h2" style={{fontSize:36,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:14,lineHeight:1.12}}>
+        <h2 className="sec-h2" style={{fontSize:40,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:14,lineHeight:1.12}}>
           Four phases. One destination.
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.75)",lineHeight:1.7,marginBottom:48}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.85)",lineHeight:1.7,marginBottom:48}}>
           Nobody gets an empire on day one. What they get is a first agent that actually works — and then the sequence takes over.
         </p>
 
@@ -236,11 +236,11 @@ export default function OfferPage() {
         </div>
         <div style={{padding:"28px 0 48px",borderBottom:"1px solid #111011"}}>
           <p style={{fontSize:12,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:12}}>🥚&nbsp;&nbsp;01 — HATCH</p>
-          <h3 style={{fontSize:26,fontWeight:900,color:"#fff",marginBottom:14,letterSpacing:"-0.02em",lineHeight:1.2}}>Your first agent is born.</h3>
-          <p style={{fontSize:17,color:"rgba(255,255,255,0.85)",lineHeight:1.72,marginBottom:12}}>
+          <h3 style={{fontSize:28,fontWeight:900,color:"#fff",marginBottom:14,letterSpacing:"-0.02em",lineHeight:1.2}}>Your first agent is born.</h3>
+          <p style={{fontSize:18,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:12}}>
             You've been trying to solve everything at once. That's why nothing's working. Your first agent does one thing — the thing that matters most right now. We find it in the interview. We build it in the first week.
           </p>
-          <p style={{fontSize:17,color:"rgba(255,255,255,0.72)",lineHeight:1.72}}>
+          <p style={{fontSize:18,color:"rgba(255,255,255,0.82)",lineHeight:1.72}}>
             Run it for 30 days and watch what happens to your calendar, your revenue, your mental load. Most people don't believe how much one focused agent can change until they see it. Then they want more.
           </p>
         </div>
@@ -251,11 +251,11 @@ export default function OfferPage() {
         </div>
         <div style={{padding:"28px 0 48px",borderBottom:"1px solid #111011"}}>
           <p style={{fontSize:12,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:12}}>🎓&nbsp;&nbsp;02 — LEARN</p>
-          <h3 style={{fontSize:26,fontWeight:900,color:"#fff",marginBottom:14,letterSpacing:"-0.02em",lineHeight:1.2}}>You become the operator.</h3>
-          <p style={{fontSize:17,color:"rgba(255,255,255,0.85)",lineHeight:1.72,marginBottom:12}}>
+          <h3 style={{fontSize:28,fontWeight:900,color:"#fff",marginBottom:14,letterSpacing:"-0.02em",lineHeight:1.2}}>You become the operator.</h3>
+          <p style={{fontSize:18,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:12}}>
             This is the part nobody else sells you. AI tools hand you access and disappear. We stay and teach you how to lead what we built together.
           </p>
-          <p style={{fontSize:17,color:"rgba(255,255,255,0.72)",lineHeight:1.72}}>
+          <p style={{fontSize:18,color:"rgba(255,255,255,0.82)",lineHeight:1.72}}>
             You'll learn how to give your agent direction. How to know when it's performing and when it's drifting. How to correct it, redirect it, and replace it if it needs to be replaced. You're not a user. You're the boss — and we make sure you actually know what that means.
           </p>
         </div>
@@ -266,11 +266,11 @@ export default function OfferPage() {
         </div>
         <div style={{padding:"28px 0 48px",borderBottom:"1px solid #111011"}}>
           <p style={{fontSize:12,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:12}}>🌱&nbsp;&nbsp;03 — GROW</p>
-          <h3 style={{fontSize:26,fontWeight:900,color:"#fff",marginBottom:14,letterSpacing:"-0.02em",lineHeight:1.2}}>One becomes a team.</h3>
-          <p style={{fontSize:17,color:"rgba(255,255,255,0.85)",lineHeight:1.72,marginBottom:12}}>
+          <h3 style={{fontSize:28,fontWeight:900,color:"#fff",marginBottom:14,letterSpacing:"-0.02em",lineHeight:1.2}}>One becomes a team.</h3>
+          <p style={{fontSize:18,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:12}}>
             Your second agent doesn't come from a menu. It emerges from what your first one reveals. Maybe your first agent qualifies leads — and now you see they're booking calls but not closing. The next agent is built around that gap.
           </p>
-          <p style={{fontSize:17,color:"rgba(255,255,255,0.72)",lineHeight:1.72}}>
+          <p style={{fontSize:18,color:"rgba(255,255,255,0.82)",lineHeight:1.72}}>
             Your team evolves from your actual results. That's not a feature — that's the entire architecture. Every agent you hatch makes the picture clearer for the next one.
           </p>
         </div>
@@ -281,14 +281,14 @@ export default function OfferPage() {
           <div style={{position:"absolute",inset:0,borderRadius:14,background:"linear-gradient(to bottom, transparent 30%, rgba(8,6,8,0.95) 100%)"}} />
           <div style={{position:"absolute",bottom:0,left:0,right:0,padding:"28px"}}>
             <p style={{fontSize:12,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:10}}>🏛️&nbsp;&nbsp;04 — EMPIRE</p>
-            <h3 style={{fontSize:26,fontWeight:900,color:"#fff",letterSpacing:"-0.02em",lineHeight:1.2}}>It runs without you running it.</h3>
+            <h3 style={{fontSize:28,fontWeight:900,color:"#fff",letterSpacing:"-0.02em",lineHeight:1.2}}>It runs without you running it.</h3>
           </div>
         </div>
         <div style={{padding:"28px 0 0"}}>
-          <p style={{fontSize:17,color:"rgba(255,255,255,0.85)",lineHeight:1.72,marginBottom:12}}>
+          <p style={{fontSize:18,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:12}}>
             Your agents coordinate. They hand off work. They run overnight. They don't take sick days, forget to follow up, or need a Monday morning meeting to get moving.
           </p>
-          <p style={{fontSize:17,color:"rgba(255,255,255,0.72)",lineHeight:1.72}}>
+          <p style={{fontSize:18,color:"rgba(255,255,255,0.82)",lineHeight:1.72}}>
             You stop being the person who keeps everything running and start being the person who decides where it goes. Most founders never get there. Not because they don't want to — because they never built the infrastructure. Now you are.
           </p>
         </div>
@@ -299,16 +299,16 @@ export default function OfferPage() {
       {/* ── THE HIVE MIND ── */}
       <section style={{padding:"60px 24px",maxWidth:660,margin:"0 auto"}}>
         <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:22}}>THE UNFAIR ADVANTAGE</p>
-        <h2 className="sec-h2" style={{fontSize:36,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:18,lineHeight:1.12}}>
+        <h2 className="sec-h2" style={{fontSize:40,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:18,lineHeight:1.12}}>
           Your team gets smarter<br />because of everyone else's team.
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.88)",lineHeight:1.72,marginBottom:14}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:14}}>
           Every AGE operator is connected to the Hive Mind — a shared intelligence layer that every member contributes to and benefits from. When someone in the network solves a problem — a qualifier script that's converting at 80%, a follow-up sequence that closed a deal nobody expected — that learning enters the network.
         </p>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.75)",lineHeight:1.72,marginBottom:14}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.85)",lineHeight:1.72,marginBottom:14}}>
           Your agents improve without you touching them. Not because we pushed an update. Because the collective got smarter and you're plugged into it.
         </p>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.88)",lineHeight:1.72,marginBottom:32}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:32}}>
           $300 a month is your seat in that network. It covers your access to the AGE Discord — where you connect with every other operator, get real-time support, and stay in the room where the sharpest builds are happening. It's the cheapest unfair advantage in business.
         </p>
         <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.2)",borderRadius:14,padding:"24px 22px"}}>
@@ -322,7 +322,7 @@ export default function OfferPage() {
           ].map((item,i) => (
             <div key={i} style={{display:"flex",gap:10,alignItems:"flex-start",marginBottom:i<4?10:0}}>
               <span style={{color:"#f59e0b",fontWeight:900,flexShrink:0,marginTop:1}}>→</span>
-              <p style={{fontSize:16,color:"rgba(255,255,255,0.82)",lineHeight:1.6}}>{item}</p>
+              <p style={{fontSize:17,color:"rgba(255,255,255,0.90)",lineHeight:1.6}}>{item}</p>
             </div>
           ))}
         </div>
@@ -333,13 +333,13 @@ export default function OfferPage() {
       {/* ── THE REAL INVESTMENT ── */}
       <section style={{padding:"60px 24px",maxWidth:660,margin:"0 auto"}}>
         <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:22}}>THE REAL INVESTMENT</p>
-        <h2 className="sec-h2" style={{fontSize:36,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:18,lineHeight:1.12}}>
+        <h2 className="sec-h2" style={{fontSize:40,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:18,lineHeight:1.12}}>
           We're going to be completely straight with you.
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.88)",lineHeight:1.72,marginBottom:14}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:14}}>
           The wrong person getting in wastes everyone's time — including yours. So here's the full picture before we ever get on a call.
         </p>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.72)",lineHeight:1.72,marginBottom:36}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.82)",lineHeight:1.72,marginBottom:36}}>
           This is not a passive purchase. This is not a tool you subscribe to and forget. This is a commitment — and we need you to go in with eyes open.
         </p>
 
@@ -353,13 +353,13 @@ export default function OfferPage() {
           <div key={i} style={{padding:"22px 0",borderBottom:i<arr.length-1?"1px solid #111011":"none"}}>
             <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.12em",color:"#f59e0b",marginBottom:6}}>{item.label.toUpperCase()}</p>
             <p style={{fontSize:19,fontWeight:800,color:"#fff",marginBottom:10,letterSpacing:"-0.01em"}}>{item.title}</p>
-            <p style={{fontSize:16,color:"rgba(255,255,255,0.78)",lineHeight:1.72}}>{item.body}</p>
+            <p style={{fontSize:17,color:"rgba(255,255,255,0.88)",lineHeight:1.72}}>{item.body}</p>
           </div>
         ))}
 
         <div style={{marginTop:36,background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.15)",borderRadius:14,padding:"22px"}}>
           <p style={{fontSize:17,fontWeight:800,color:"#fff",marginBottom:8}}>If that sounds like a lot — it means this isn't for you. And that's fine.</p>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.72)",lineHeight:1.7}}>If it sounds like a fair trade for a team that works while you sleep, qualifies your leads before they hit your calendar, follows up for 90 days without you asking, and gets smarter every day because of a network you're now part of — keep reading. And keep texting.</p>
+          <p style={{fontSize:17,color:"rgba(255,255,255,0.82)",lineHeight:1.7}}>If it sounds like a fair trade for a team that works while you sleep, qualifies your leads before they hit your calendar, follows up for 90 days without you asking, and gets smarter every day because of a network you're now part of — keep reading. And keep texting.</p>
         </div>
       </section>
 
@@ -368,13 +368,13 @@ export default function OfferPage() {
       {/* ── PROOF ── */}
       <section style={{padding:"60px 24px 0",maxWidth:660,margin:"0 auto"}}>
         <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:22}}>WHY WE CAN PROMISE THIS</p>
-        <h2 className="sec-h2" style={{fontSize:36,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:18,lineHeight:1.12}}>
+        <h2 className="sec-h2" style={{fontSize:40,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:18,lineHeight:1.12}}>
           We built AGE for our own<br />business first. Not as a prototype.
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.88)",lineHeight:1.72,marginBottom:14}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.92)",lineHeight:1.72,marginBottom:14}}>
           As the actual operating system for how we run. Our agents handle outreach, qualification, follow-up, content, and operations — every day, without us managing them. We've been running this for three years.
         </p>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.72)",lineHeight:1.72,marginBottom:40}}>
+        <p style={{fontSize:18,color:"rgba(255,255,255,0.82)",lineHeight:1.72,marginBottom:40}}>
           The hatching protocol, the Hive Mind, the training methodology, the overnight autonomous work — none of it shipped until it worked for us. We know what it feels like to wake up to work done. To show up to calls already booked. To watch your agents hand off to each other while you're at dinner with your family. We're not selling a theory. We're handing you keys to something we already drive every single day.
         </p>
       </section>
@@ -399,7 +399,7 @@ export default function OfferPage() {
           <p style={{fontSize:17,color:"rgba(255,255,255,0.78)",lineHeight:1.72,marginBottom:14,maxWidth:420,margin:"0 auto 14px"}}>
             The depth of your custom plan is a direct reflection of the depth of your answers. The more honest you are, the more dangerous what we build for you will be.
           </p>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.55)",lineHeight:1.65,maxWidth:420,margin:"0 auto"}}>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.68)",lineHeight:1.65,maxWidth:420,margin:"0 auto"}}>
             When you finish — we send you a link. When you've seen it — your phone rings. That's the moment everything changes. Don't miss it.
           </p>
         </div>
