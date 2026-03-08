@@ -297,7 +297,7 @@ export default function OfferPage() {
       <hr className="dim" />
 
       {/* ── THE HIVE MIND ── */}
-      <section style={{padding:"60px 24px",maxWidth:660,margin:"0 auto"}}>
+      <section style={{padding:"60px 24px 0",maxWidth:660,margin:"0 auto"}}>
         <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:22}}>THE UNFAIR ADVANTAGE</p>
         <h2 className="sec-h2" style={{fontSize:40,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:18,lineHeight:1.12}}>
           Your team gets smarter<br />because of everyone else's team.
@@ -328,6 +328,11 @@ export default function OfferPage() {
         </div>
       </section>
 
+      {/* ── IMAGE: HIVE MIND ── */}
+      <div style={{maxWidth:"100%",margin:"0 auto"}}>
+        <Image src="/assets/2026-03-07-offer-hive-mind-v2.png" alt="The Hive Mind — collective intelligence network" width={1600} height={700} style={{width:"100%",height:"auto",display:"block"}} />
+      </div>
+
       <hr className="dim" />
 
       {/* ── THE REAL INVESTMENT ── */}
@@ -347,13 +352,14 @@ export default function OfferPage() {
           { label:"$300 / month", title:"Hive Mind + Discord Membership", body:"Your ongoing access to the network, the community, and the collective intelligence. This is the baseline. Everything else is built on top of it." },
           { label:"One-time fee", title:"The Install", body:"Your first agent, fully built and deployed. We scope this together on the call — it covers setup, the hatching protocol, your onboarding, and your first 30 days live." },
           { label:"Optional", title:"Revenue Share on Custom Builds", body:"If you want us to go deeper — more complex agent design, custom automation, deeper integration — we'll take a percentage of what it generates. We only win when you win. There's no incentive to build something that doesn't perform." },
-          { label:"Your hardware", title:"This Runs on Your Infrastructure", body:"AGE lives on your machine. That means you own everything — your data, your agents, your IP. Nobody can pull the plug on you. But you need the right hardware. We'll tell you exactly what, and it's a one-time purchase." },
-          { label:"2-3 hours / day", title:"Your Time While Setting Up", body:"Not forever. But while your agents are being built and trained, expect to put in real hours. This is the investment that most people underestimate — and the one that separates operators from observers. If you want a tool you can ignore, this isn't it." },
-        ].map((item,i,arr) => (
+          { label:"Your hardware", title:"This Runs on Your Infrastructure", body:"AGE lives on your machine. That means you own everything — your data, your agents, your IP. Nobody can pull the plug on you. But you need the right hardware. We'll tell you exactly what, and it's a one-time purchase.", img:"/assets/2026-03-07-offer-hardware-v2.png" },
+          { label:"2-3 hours / day", title:"Your Time While Setting Up", body:"Not forever. But while your agents are being built and trained, expect to put in real hours. This is the investment that most people underestimate — and the one that separates operators from observers. If you want a tool you can ignore, this isn't it.", img:"/assets/2026-03-07-offer-time.png" },
+        ].map((item: {label:string,title:string,body:string,img?:string},i,arr) => (
           <div key={i} style={{padding:"22px 0",borderBottom:i<arr.length-1?"1px solid #111011":"none"}}>
             <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.12em",color:"#f59e0b",marginBottom:6}}>{item.label.toUpperCase()}</p>
             <p style={{fontSize:19,fontWeight:800,color:"#fff",marginBottom:10,letterSpacing:"-0.01em"}}>{item.title}</p>
-            <p style={{fontSize:17,color:"rgba(255,255,255,0.88)",lineHeight:1.72}}>{item.body}</p>
+            <p style={{fontSize:17,color:"rgba(255,255,255,0.88)",lineHeight:1.72,marginBottom:item.img?16:0}}>{item.body}</p>
+            {item.img && <Image src={item.img} alt={item.title} width={800} height={380} style={{width:"100%",height:"auto",display:"block",borderRadius:12,marginTop:8}} />}
           </div>
         ))}
 
@@ -386,8 +392,13 @@ export default function OfferPage() {
 
       <hr className="dim" />
 
+      {/* ── IMAGE: THE CALL ── */}
+      <div style={{maxWidth:600,margin:"0 auto",padding:"0 24px"}}>
+        <Image src="/assets/2026-03-07-offer-the-call.png" alt="The moment — your phone rings" width={900} height={900} style={{width:"100%",height:"auto",display:"block",borderRadius:20}} />
+      </div>
+
       {/* ── KEEP TEXTING ── */}
-      <section style={{padding:"60px 24px 80px",maxWidth:660,margin:"0 auto"}}>
+      <section style={{padding:"40px 24px 80px",maxWidth:660,margin:"0 auto"}}>
         <div style={{background:"#0d0b0d",border:"1px solid rgba(245,158,11,0.25)",borderRadius:16,padding:"40px 28px",textAlign:"center"}}>
           <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:9,marginBottom:20}}>
             <span className="amber-dot" />
