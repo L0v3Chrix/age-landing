@@ -14,7 +14,7 @@ export default function Apply() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
     });
-    window.location.href = "https://age-v5.vercel.app";
+    window.location.href = "/offer";
   }
 
   return (
