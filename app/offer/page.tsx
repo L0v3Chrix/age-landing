@@ -397,23 +397,14 @@ export default function OfferPage() {
         <Image src="/assets/2026-03-07-offer-the-call.png" alt="The moment — your phone rings" width={900} height={900} style={{width:"100%",height:"auto",display:"block",borderRadius:20}} />
       </div>
 
-      {/* ── KEEP TEXTING ── */}
-      <section style={{padding:"40px 24px 80px",maxWidth:660,margin:"0 auto"}}>
-        <div style={{background:"#0d0b0d",border:"1px solid rgba(245,158,11,0.25)",borderRadius:16,padding:"40px 28px",textAlign:"center"}}>
-          <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:9,marginBottom:20}}>
-            <span className="amber-dot" />
-            <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.18em",color:"#f59e0b"}}>YOUR INTERVIEW IS STILL RUNNING</p>
-          </div>
-          <h3 style={{fontSize:32,fontWeight:900,letterSpacing:"-0.025em",color:"#fff",marginBottom:16,lineHeight:1.15}}>
-            Answer every question.<br />Don't hold back.
-          </h3>
-          <p style={{fontSize:17,color:"rgba(255,255,255,0.78)",lineHeight:1.72,marginBottom:14,maxWidth:420,margin:"0 auto 14px"}}>
-            The depth of your custom plan is a direct reflection of the depth of your answers. The more honest you are, the more dangerous what we build for you will be.
-          </p>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.68)",lineHeight:1.65,maxWidth:420,margin:"0 auto"}}>
-            When you finish — we send you a link. When you've seen it — your phone rings. That's the moment everything changes. Don't miss it.
-          </p>
-        </div>
+      {/* ── CTA ── */}
+      <section style={{padding:"40px 24px 80px",maxWidth:660,margin:"0 auto",textAlign:"center"}}>
+        <Link href="/apply" className="cta-btn" style={{display:"inline-flex",maxWidth:420,margin:"0 auto"}}>
+          Get My Operator Dossier &rarr;
+        </Link>
+        <p style={{marginTop:16,fontSize:15,color:"rgba(255,255,255,0.5)",lineHeight:1.6,maxWidth:420,margin:"16px auto 0"}}>
+          We'll research your business and build your custom agent blueprint. Free. No call required.
+        </p>
       </section>
 
       <div style={{borderTop:"1px solid #111011",padding:"28px",textAlign:"center"}}>
