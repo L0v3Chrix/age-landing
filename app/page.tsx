@@ -70,7 +70,7 @@ export default function Home() {
         .eyebrow { font-size:10px;font-weight:700;letter-spacing:0.22em;color:#f59e0b; }
         .cta-primary { display:inline-flex;align-items:center;justify-content:center;background:#f59e0b;color:#080608;font-size:18px;font-weight:900;font-family:inherit;letter-spacing:-0.01em;padding:18px 44px;border-radius:10px;text-decoration:none;transition:transform 0.15s,background 0.15s; }
         .cta-primary:hover { transform:translateY(-2px);background:#fbbf24; }
-        .cta-ghost { display:inline-flex;align-items:center;justify-content:center;background:transparent;color:rgba(255,255,255,0.5);font-size:16px;font-weight:700;font-family:inherit;padding:17px 32px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);text-decoration:none;transition:all 0.15s; }
+        .cta-ghost { display:inline-flex;align-items:center;justify-content:center;background:transparent;color:rgba(255,255,255,0.78);font-size:16px;font-weight:700;font-family:inherit;padding:17px 32px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);text-decoration:none;transition:all 0.15s; }
         .cta-ghost:hover { color:#fff;border-color:rgba(255,255,255,0.28); }
         @media(max-width:640px) {
           .hero-h1 { font-size:32px !important;line-height:1.08 !important; }
@@ -179,10 +179,10 @@ export default function Home() {
         <p className="eyebrow" style={{marginBottom:18}}>THE PROBLEM</p>
         <h2 className="copy-h2" style={{fontSize:38,fontWeight:900,lineHeight:1.1,letterSpacing:"-0.025em",color:"#fff",marginBottom:18}}>
           You tried AI tools.<br />
-          <span style={{color:"rgba(255,255,255,0.35)"}}>You needed a team.</span><br />
+          <span style={{color:"rgba(255,255,255,0.55)"}}>You needed a team.</span><br />
           <span style={{color:"#f59e0b"}}>You got a calculator.</span>
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.55)",lineHeight:1.72}}>
+        <p style={{fontSize:17,color:"rgba(255,255,255,0.82)",lineHeight:1.72}}>
           A chatbot isn't a team member. A prompt isn't a workflow. A tool that forgets everything the moment you close the tab isn't an employee. You needed infrastructure — not another subscription.
         </p>
       </section>
@@ -193,10 +193,10 @@ export default function Home() {
         <h2 className="copy-h2" style={{fontSize:38,fontWeight:900,lineHeight:1.1,letterSpacing:"-0.025em",color:"#fff",marginBottom:18}}>
           What if you could hatch<br />your own agents?
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.55)",lineHeight:1.72,marginBottom:14}}>
+        <p style={{fontSize:17,color:"rgba(255,255,255,0.82)",lineHeight:1.72,marginBottom:14}}>
           Not pre-built templates. Not generic bots. Agents designed specifically for your business — your customers, your operations, your goals.
         </p>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.55)",lineHeight:1.72}}>
+        <p style={{fontSize:17,color:"rgba(255,255,255,0.82)",lineHeight:1.72}}>
           Agents that know who you are. That remember everything. That level up through demonstrated performance. That coordinate with each other.
         </p>
         <p style={{fontSize:20,fontWeight:800,color:"#fff",marginTop:20,letterSpacing:"-0.015em"}}>A team that belongs to you.</p>
@@ -215,7 +215,7 @@ export default function Home() {
             <span style={{fontSize:10,fontWeight:900,color:"#f59e0b",letterSpacing:"0.1em",minWidth:24,paddingTop:4,flexShrink:0}}>{s.n}</span>
             <div>
               <p style={{fontSize:16,fontWeight:800,color:"#fff",marginBottom:6,letterSpacing:"-0.01em"}}>{s.title}</p>
-              <p style={{fontSize:14,color:"rgba(255,255,255,0.4)",lineHeight:1.72}}>{s.body}</p>
+              <p style={{fontSize:14,color:"rgba(255,255,255,0.65)",lineHeight:1.72}}>{s.body}</p>
             </div>
           </div>
         ))}
@@ -228,7 +228,7 @@ export default function Home() {
           The platform is the subscription.<br />
           <span style={{color:"#f59e0b"}}>The team is yours.</span>
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.55)",lineHeight:1.72}}>
+        <p style={{fontSize:17,color:"rgba(255,255,255,0.82)",lineHeight:1.72}}>
           Your local runtime. Your agents. Your soul files. Cancel tomorrow — they stay on your machine. Forever. We're not renting you tools. We're building you infrastructure.
         </p>
       </section>

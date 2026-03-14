@@ -48,7 +48,7 @@ export default function OfferPage() {
         <Link href="/" style={{fontSize:14,fontWeight:900,letterSpacing:"0.2em",color:"#fff",textDecoration:"none"}}>AGE</Link>
         <div style={{display:"flex",alignItems:"center",gap:8}}>
           <span className="live-dot" />
-          <span style={{fontSize:12,color:"rgba(255,255,255,0.55)",fontWeight:700,letterSpacing:"0.05em"}}>GENESIS IN PROGRESS</span>
+          <span style={{fontSize:12,color:"rgba(255,255,255,0.82)",fontWeight:700,letterSpacing:"0.05em"}}>GENESIS IN PROGRESS</span>
         </div>
       </nav>
 
@@ -106,16 +106,16 @@ export default function OfferPage() {
             <div style={{display:"flex",gap:18,alignItems:"flex-start"}}>
               <div style={{flexShrink:0,display:"flex",flexDirection:"column",alignItems:"center"}}>
                 <div style={{width:30,height:30,borderRadius:"50%",background:s.active?"#22c55e":"#1a1a1a",border:s.active?"none":"1px solid #2a2a2a",display:"flex",alignItems:"center",justifyContent:"center"}}>
-                  <span style={{fontSize:13,fontWeight:900,color:s.active?"#080608":"rgba(255,255,255,0.35)"}}>{s.num}</span>
+                  <span style={{fontSize:13,fontWeight:900,color:s.active?"#080608":"rgba(255,255,255,0.55)"}}>{s.num}</span>
                 </div>
                 {i<2 && <div className="step-line" />}
               </div>
               <div style={{paddingBottom:i<2?28:0}}>
                 <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:10,flexWrap:"wrap"}}>
-                  <p style={{fontSize:19,fontWeight:800,color:s.active?"#fff":"rgba(255,255,255,0.4)"}}>{s.title}</p>
+                  <p style={{fontSize:19,fontWeight:800,color:s.active?"#fff":"rgba(255,255,255,0.65)"}}>{s.title}</p>
                   {s.badge && <span style={{fontSize:11,fontWeight:700,color:s.bc,background:s.bg,padding:"3px 10px",borderRadius:20,letterSpacing:"0.08em"}}>{s.badge}</span>}
                 </div>
-                <p style={{fontSize:16,color:s.active?"rgba(255,255,255,0.85)":"rgba(255,255,255,0.4)",lineHeight:1.72}}>{s.desc}</p>
+                <p style={{fontSize:16,color:s.active?"rgba(255,255,255,0.85)":"rgba(255,255,255,0.65)",lineHeight:1.72}}>{s.desc}</p>
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function OfferPage() {
 
         <div className="timeline-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
           <div style={{background:"#0c0a0c",border:"1px solid #1e1c1e",borderRadius:14,padding:"24px 22px"}}>
-            <p style={{fontSize:12,fontWeight:700,letterSpacing:"0.12em",color:"rgba(255,255,255,0.35)",marginBottom:20}}>THE LONG WAY ALONE</p>
+            <p style={{fontSize:12,fontWeight:700,letterSpacing:"0.12em",color:"rgba(255,255,255,0.55)",marginBottom:20}}>THE LONG WAY ALONE</p>
             {timelineLeft.map((t,i) => (
               <div key={i} style={{display:"flex",gap:14,marginBottom:i<4?18:0,alignItems:"flex-start"}}>
                 <div style={{display:"flex",flexDirection:"column",alignItems:"center",flexShrink:0,marginTop:3}}>
@@ -153,14 +153,14 @@ export default function OfferPage() {
                   {i<4 && <div style={{width:1,height:18,background:"#1e1e1e",margin:"3px 0"}} />}
                 </div>
                 <div>
-                  <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.35)",letterSpacing:"0.06em",marginBottom:3}}>{t.month.toUpperCase()}</p>
-                  <p style={{fontSize:15,fontWeight:700,color:"rgba(255,255,255,0.5)"}}>{t.label}</p>
+                  <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.55)",letterSpacing:"0.06em",marginBottom:3}}>{t.month.toUpperCase()}</p>
+                  <p style={{fontSize:15,fontWeight:700,color:"rgba(255,255,255,0.78)"}}>{t.label}</p>
                   <p style={{fontSize:14,color:"rgba(255,255,255,0.52)",marginTop:2,fontStyle:"italic"}}>{t.sub}</p>
                 </div>
               </div>
             ))}
             <div style={{marginTop:20,paddingTop:16,borderTop:"1px solid #1a1a1a"}}>
-              <p style={{fontSize:15,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>Total: 18 months. Maybe a working system. Definitely a lot of money spent finding out what doesn't work.</p>
+              <p style={{fontSize:15,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>Total: 18 months. Maybe a working system. Definitely a lot of money spent finding out what doesn't work.</p>
             </div>
           </div>
 
@@ -402,7 +402,7 @@ export default function OfferPage() {
         <Link href="/apply" className="cta-btn" style={{display:"inline-flex",maxWidth:420,margin:"0 auto"}}>
           Get My Operator Dossier &rarr;
         </Link>
-        <p style={{marginTop:16,fontSize:15,color:"rgba(255,255,255,0.5)",lineHeight:1.6,maxWidth:420,margin:"16px auto 0"}}>
+        <p style={{marginTop:16,fontSize:15,color:"rgba(255,255,255,0.78)",lineHeight:1.6,maxWidth:420,margin:"16px auto 0"}}>
           We'll research your business and build your custom agent blueprint. Free. No call required.
         </p>
       </section>

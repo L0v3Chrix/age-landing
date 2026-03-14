@@ -35,7 +35,7 @@ export default function AdamDeliverable() {
         <Link href="/" style={{fontSize:13,fontWeight:900,letterSpacing:"0.2em",color:"#fff",textDecoration:"none"}}>AGE</Link>
         <div style={{display:"flex",alignItems:"center",gap:7}}>
           <span className="live-dot" />
-          <span style={{fontSize:11,color:"rgba(255,255,255,0.4)",fontWeight:600}}>BUILT FOR ADAM MCINNES</span>
+          <span style={{fontSize:11,color:"rgba(255,255,255,0.65)",fontWeight:600}}>BUILT FOR ADAM MCINNES</span>
         </div>
       </nav>
 
@@ -46,7 +46,7 @@ export default function AdamDeliverable() {
             style={{borderRadius:"50%",border:"2px solid #f59e0b",flexShrink:0}} />
           <div>
             <p style={{fontSize:15,fontWeight:800,color:"#fff"}}>Adam McInnes</p>
-            <p style={{fontSize:11,color:"rgba(255,255,255,0.4)",marginTop:2}}>GHL Mastery · Calgary 🇨🇦 · 7 years</p>
+            <p style={{fontSize:11,color:"rgba(255,255,255,0.65)",marginTop:2}}>GHL Mastery · Calgary 🇨🇦 · 7 years</p>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ export default function AdamDeliverable() {
         <h1 className="h1" style={{fontSize:40,fontWeight:900,lineHeight:1.07,letterSpacing:"-0.03em",color:"#fff",marginBottom:18}}>
           This is what Monday looks like<br />when your agents are live.
         </h1>
-        <p style={{fontSize:16,color:"rgba(255,255,255,0.7)",lineHeight:1.7,marginBottom:0}}>
+        <p style={{fontSize:16,color:"rgba(255,255,255,0.92)",lineHeight:1.7,marginBottom:0}}>
           You told us your problem: <span style={{color:"#fff",fontWeight:600}}>low quality appointments.</span> Not enough of the right ones. You tried boosting. It didn't work. Here's why — and here's the fix. Built specifically for GHL Mastery.
         </p>
       </section>
@@ -63,7 +63,7 @@ export default function AdamDeliverable() {
       <section style={{padding:"0 24px 40px",maxWidth:620,margin:"0 auto"}}>
         <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:20}}>
           <span className="live-dot" />
-          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.4)"}}>GHL MASTERY · AGENT ACTIVITY LOG</p>
+          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.65)"}}>GHL MASTERY · AGENT ACTIVITY LOG</p>
         </div>
         <div style={{background:"#0c0a0c",border:"1px solid #1a1a1a",borderRadius:14,overflow:"hidden"}}>
           {feed.map((item, i) => (
@@ -73,19 +73,19 @@ export default function AdamDeliverable() {
               background: item.status === "live" ? "rgba(245,158,11,0.06)" : item.status === "you" ? "rgba(255,255,255,0.02)" : "transparent",
               alignItems:"flex-start"
             }}>
-              <span style={{fontSize:11,color:"rgba(255,255,255,0.25)",minWidth:44,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
+              <span style={{fontSize:11,color:"rgba(255,255,255,0.45)",minWidth:44,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
               <div style={{flex:1}}>
-                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.5)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
+                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.78)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
                   {item.agent.toUpperCase()}
                 </p>
-                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.65)",lineHeight:1.5}}>{item.action}</p>
+                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.88)",lineHeight:1.5}}>{item.action}</p>
               </div>
               {item.status === "done" && <span style={{fontSize:10,color:"#22c55e",marginTop:3,flexShrink:0}}>✓</span>}
               {item.status === "live" && <span className="live-dot" style={{marginTop:5}} />}
             </div>
           ))}
         </div>
-        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.25)",textAlign:"center"}}>
+        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.45)",textAlign:"center"}}>
           This isn't a demo. This is what a real Monday looks like. Your agents run whether you do or not.
         </p>
       </section>
@@ -97,7 +97,7 @@ export default function AdamDeliverable() {
           <p style={{fontSize:16,fontWeight:800,color:"#fff",lineHeight:1.5,letterSpacing:"-0.01em",marginBottom:10}}>
             Facebook → $7 offer → lead form → calendar.<br />No filter. No quality control. Volume without signal.
           </p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.6)",lineHeight:1.7}}>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.7}}>
             Boosting sends more people through the same broken path. More bad appointments, not better ones. The fix isn't more traffic — it's a layer between the form and your calendar that only lets the right people through. That's The Qualifier. It runs 24/7 and it never lets a bad lead touch your time.
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function AdamDeliverable() {
             <span style={{fontSize:22,flexShrink:0,paddingTop:2}}>{a.icon}</span>
             <div>
               <p style={{fontSize:15,fontWeight:800,color:"#fff",marginBottom:4}}>{a.name}</p>
-              <p style={{fontSize:13,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>{a.desc}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>{a.desc}</p>
             </div>
           </div>
         ))}
@@ -128,15 +128,15 @@ export default function AdamDeliverable() {
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:18}}>YOUR MONDAY. BEFORE AND AFTER.</p>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
           <div style={{background:"#0c0a0c",border:"1px solid #1e1c1e",borderRadius:12,padding:"18px 16px"}}>
-            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.3)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
+            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.5)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
             {["Scroll through lead form submissions","Manually text back every lead","Show up to calls with tire-kickers","Spend hours on proposals","Chase cold leads yourself","Run the ads, then run the follow-up"].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.4)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.65)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
             ))}
           </div>
           <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.2)",borderRadius:12,padding:"18px 16px"}}>
             <p style={{fontSize:11,fontWeight:700,color:"#f59e0b",letterSpacing:"0.1em",marginBottom:14}}>AFTER</p>
             {["Calendar already filtered","Leads pre-warmed before the call","Every call is a buyer","Proposals write themselves","Follow-up runs for 90 days","Agents handle it while you sleep"].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.75)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.94)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
             ))}
           </div>
         </div>
@@ -148,7 +148,7 @@ export default function AdamDeliverable() {
           7 years building GHL Mastery.<br />
           <span style={{color:"#f59e0b"}}>90 days to make it run<br />without you running it.</span>
         </p>
-        <p style={{fontSize:14,color:"rgba(255,255,255,0.45)",marginBottom:28,lineHeight:1.6}}>
+        <p style={{fontSize:14,color:"rgba(255,255,255,0.72)",marginBottom:28,lineHeight:1.6}}>
           These agents exist. They're ready. The only question is whether they're working for GHL Mastery or someone else.
         </p>
         <a className="cta" href="/apply" style={{display:"flex",maxWidth:340,margin:"0 auto"}}>

@@ -34,7 +34,7 @@ export default function BradDeliverable() {
         <Link href="/" style={{fontSize:13,fontWeight:900,letterSpacing:"0.2em",color:"#fff",textDecoration:"none"}}>AGE</Link>
         <div style={{display:"flex",alignItems:"center",gap:7}}>
           <span className="live-dot" />
-          <span style={{fontSize:11,color:"rgba(255,255,255,0.4)",fontWeight:600}}>BUILT FOR BRAD RASCHKE</span>
+          <span style={{fontSize:11,color:"rgba(255,255,255,0.65)",fontWeight:600}}>BUILT FOR BRAD RASCHKE</span>
         </div>
       </nav>
 
@@ -42,14 +42,14 @@ export default function BradDeliverable() {
       <section style={{padding:"52px 24px 36px",maxWidth:620,margin:"0 auto",animation:"fadeUp 0.65s ease both"}}>
         <div style={{marginBottom:28}}>
           <p style={{fontSize:17,fontWeight:800,color:"#fff"}}>Brad Raschke</p>
-          <p style={{fontSize:12,color:"rgba(255,255,255,0.4)",marginTop:4}}>Brad Raschke Sales · Austin, TX 🤘 · 3 years · Solo operator</p>
+          <p style={{fontSize:12,color:"rgba(255,255,255,0.65)",marginTop:4}}>Brad Raschke Sales · Austin, TX 🤘 · 3 years · Solo operator</p>
         </div>
 
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.22em",color:"#f59e0b",marginBottom:14}}>AGENT GENESIS ENGINE</p>
         <h1 className="h1" style={{fontSize:40,fontWeight:900,lineHeight:1.07,letterSpacing:"-0.03em",color:"#fff",marginBottom:18}}>
           This is what Monday looks like<br />when your agents are live.
         </h1>
-        <p style={{fontSize:16,color:"rgba(255,255,255,0.7)",lineHeight:1.7}}>
+        <p style={{fontSize:16,color:"rgba(255,255,255,0.92)",lineHeight:1.7}}>
           You told us your problem: <span style={{color:"#fff",fontWeight:600}}>not enough qualified leads showing up ready to buy.</span> You burned $5k on paid ads with nothing to show. Here's why that didn't work — and what will.
         </p>
       </section>
@@ -58,7 +58,7 @@ export default function BradDeliverable() {
       <section style={{padding:"0 24px 40px",maxWidth:620,margin:"0 auto"}}>
         <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:20}}>
           <span className="live-dot" />
-          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.4)"}}>BRAD RASCHKE SALES · AGENT ACTIVITY LOG</p>
+          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.65)"}}>BRAD RASCHKE SALES · AGENT ACTIVITY LOG</p>
         </div>
         <div style={{background:"#0c0a0c",border:"1px solid #1a1a1a",borderRadius:14,overflow:"hidden"}}>
           {feed.map((item, i) => (
@@ -68,19 +68,19 @@ export default function BradDeliverable() {
               background: item.status === "live" ? "rgba(245,158,11,0.06)" : item.status === "you" ? "rgba(255,255,255,0.02)" : "transparent",
               alignItems:"flex-start"
             }}>
-              <span style={{fontSize:11,color:"rgba(255,255,255,0.25)",minWidth:48,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
+              <span style={{fontSize:11,color:"rgba(255,255,255,0.45)",minWidth:48,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
               <div style={{flex:1}}>
-                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.5)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
+                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.78)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
                   {item.agent.toUpperCase()}
                 </p>
-                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.65)",lineHeight:1.5}}>{item.action}</p>
+                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.88)",lineHeight:1.5}}>{item.action}</p>
               </div>
               {item.status === "done" && <span style={{fontSize:10,color:"#22c55e",marginTop:3,flexShrink:0}}>✓</span>}
               {item.status === "live" && <span className="live-dot" style={{marginTop:5}} />}
             </div>
           ))}
         </div>
-        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.25)",textAlign:"center"}}>
+        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.45)",textAlign:"center"}}>
           This isn't a demo. This is what a real Monday looks like. Agents run whether you do or not.
         </p>
       </section>
@@ -92,7 +92,7 @@ export default function BradDeliverable() {
           <p style={{fontSize:16,fontWeight:800,color:"#fff",lineHeight:1.5,letterSpacing:"-0.01em",marginBottom:10}}>
             Cold traffic → landing page → calendar = strangers on your calls.
           </p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.6)",lineHeight:1.7}}>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.7}}>
             Paid ads work when there's trust already built. You're killing it on Instagram because people <em>know</em> you before they book. The fix isn't more spend — it's turning your content into a machine that warms leads before they ever hit your calendar. That's what the agents do.
           </p>
         </div>
@@ -101,10 +101,10 @@ export default function BradDeliverable() {
       {/* YOUR QUOTE */}
       <section style={{padding:"0 24px 32px",maxWidth:620,margin:"0 auto"}}>
         <div style={{borderLeft:"3px solid #f59e0b",paddingLeft:16}}>
-          <p style={{fontSize:15,color:"rgba(255,255,255,0.6)",fontStyle:"italic",lineHeight:1.65}}>
+          <p style={{fontSize:15,color:"rgba(255,255,255,0.85)",fontStyle:"italic",lineHeight:1.65}}>
             "Not enough qualified leads showing up to calls ready to buy."
           </p>
-          <p style={{fontSize:11,color:"rgba(255,255,255,0.3)",marginTop:6,fontWeight:600}}>— Brad Raschke</p>
+          <p style={{fontSize:11,color:"rgba(255,255,255,0.5)",marginTop:6,fontWeight:600}}>— Brad Raschke</p>
         </div>
       </section>
 
@@ -122,7 +122,7 @@ export default function BradDeliverable() {
             <span style={{fontSize:22,flexShrink:0,paddingTop:2}}>{a.icon}</span>
             <div>
               <p style={{fontSize:15,fontWeight:800,color:"#fff",marginBottom:4}}>{a.name}</p>
-              <p style={{fontSize:13,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>{a.desc}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>{a.desc}</p>
             </div>
           </div>
         ))}
@@ -135,7 +135,7 @@ export default function BradDeliverable() {
           <p style={{fontSize:16,fontWeight:800,color:"#fff",lineHeight:1.5,marginBottom:10}}>
             A good month is 15 clients × $2,000 = $30,000.
           </p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.6)",lineHeight:1.7}}>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.7}}>
             If The Qualifier adds 2 qualified calls a week and The Closer saves 1 churning client a month — that's $6k/mo you weren't getting. The $5k you burned on ads? This would've been smarter.
           </p>
         </div>
@@ -146,15 +146,15 @@ export default function BradDeliverable() {
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:18}}>YOUR MONDAY. BEFORE AND AFTER.</p>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
           <div style={{background:"#0c0a0c",border:"1px solid #1e1c1e",borderRadius:12,padding:"18px 16px"}}>
-            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.3)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
+            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.5)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
             {["Reply to every DM manually","Show up to calls with tire-kickers","Post content when you remember","Chase cold leads yourself","Hope referrals keep coming","Solo everything"].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.4)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.65)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
             ))}
           </div>
           <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.2)",borderRadius:12,padding:"18px 16px"}}>
             <p style={{fontSize:11,fontWeight:700,color:"#f59e0b",letterSpacing:"0.1em",marginBottom:14}}>AFTER</p>
             {["DMs screened automatically","Every call is a buyer","Content runs daily without you","Follow-up runs for 90 days","Referrals get qualified instantly","You coach. Agents handle the rest."].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.75)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.94)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
             ))}
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function BradDeliverable() {
           3 years building Brad Raschke Sales.<br />
           <span style={{color:"#f59e0b"}}>90 days to make it run<br />without you running it.</span>
         </p>
-        <p style={{fontSize:14,color:"rgba(255,255,255,0.45)",marginBottom:28,lineHeight:1.6}}>
+        <p style={{fontSize:14,color:"rgba(255,255,255,0.72)",marginBottom:28,lineHeight:1.6}}>
           These agents exist. They're ready. The only question is whether they're working for you or someone else in Austin.
         </p>
         <a className="cta" href="/apply" style={{display:"flex",maxWidth:340,margin:"0 auto"}}>

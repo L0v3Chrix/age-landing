@@ -34,7 +34,7 @@ export default function SteveDeliverable() {
         <Link href="/" style={{fontSize:13,fontWeight:900,letterSpacing:"0.2em",color:"#fff",textDecoration:"none"}}>AGE</Link>
         <div style={{display:"flex",alignItems:"center",gap:7}}>
           <span className="live-dot" />
-          <span style={{fontSize:11,color:"rgba(255,255,255,0.4)",fontWeight:600}}>BUILT FOR STEVE WILLIAMS · BENNU COFFEE</span>
+          <span style={{fontSize:11,color:"rgba(255,255,255,0.65)",fontWeight:600}}>BUILT FOR STEVE WILLIAMS · BENNU COFFEE</span>
         </div>
       </nav>
 
@@ -64,10 +64,10 @@ export default function SteveDeliverable() {
           </div>
           <div>
             <p style={{fontSize:15,fontWeight:800,color:"#fff"}}>Steve & Stephanie Williams</p>
-            <p style={{fontSize:11,color:"rgba(255,255,255,0.4)",marginTop:2}}>Bennu Coffee · Austin, TX 🤘 · 3 Locations · Open 24/7 since 2009</p>
+            <p style={{fontSize:11,color:"rgba(255,255,255,0.65)",marginTop:2}}>Bennu Coffee · Austin, TX 🤘 · 3 Locations · Open 24/7 since 2009</p>
           </div>
         </div>
-        <p style={{fontSize:16,color:"rgba(255,255,255,0.7)",lineHeight:1.75}}>
+        <p style={{fontSize:16,color:"rgba(255,255,255,0.92)",lineHeight:1.75}}>
           We did our homework, Steve. Not just your website — your story.{" "}
           <span style={{color:"#fff",fontWeight:600}}>You and Stephanie met at a coffee shop.</span>{" "}
           You opened Bennu East on MLK in 2009. You invented a cold brew recipe in year one that became{" "}
@@ -92,7 +92,7 @@ export default function SteveDeliverable() {
           <p style={{fontSize:"clamp(18px,3.5vw,26px)",fontWeight:900,color:"#fff",lineHeight:1.2,letterSpacing:"-0.02em",maxWidth:480}}>
             The Bennu bird is the Egyptian phoenix.<br />Symbol of rebirth. Symbol of resurrection.
           </p>
-          <p style={{fontSize:13,color:"rgba(255,255,255,0.55)",maxWidth:400,lineHeight:1.6}}>
+          <p style={{fontSize:13,color:"rgba(255,255,255,0.82)",maxWidth:400,lineHeight:1.6}}>
             Steve chose that name when he and Stephanie started a new chapter together. This campaign is another one.
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function SteveDeliverable() {
       <section style={{padding:"40px 24px 40px",maxWidth:620,margin:"0 auto"}}>
         <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:20}}>
           <span className="live-dot" />
-          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.4)"}}>BENNU COFFEE · ALL THREE LOCATIONS · AGENT ACTIVITY LOG</p>
+          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.65)"}}>BENNU COFFEE · ALL THREE LOCATIONS · AGENT ACTIVITY LOG</p>
         </div>
         <div style={{background:"#0c0a0c",border:"1px solid #1a1a1a",borderRadius:14,overflow:"hidden"}}>
           {feed.map((item, i) => (
@@ -112,19 +112,19 @@ export default function SteveDeliverable() {
               background: item.status === "live" ? "rgba(245,158,11,0.06)" : item.status === "you" ? "rgba(255,255,255,0.02)" : "transparent",
               alignItems:"flex-start"
             }}>
-              <span style={{fontSize:11,color:"rgba(255,255,255,0.25)",minWidth:44,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
+              <span style={{fontSize:11,color:"rgba(255,255,255,0.45)",minWidth:44,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
               <div style={{flex:1}}>
-                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.5)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
+                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.78)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
                   {item.agent.toUpperCase()}
                 </p>
-                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.65)",lineHeight:1.5}}>{item.action}</p>
+                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.88)",lineHeight:1.5}}>{item.action}</p>
               </div>
               {item.status === "done" && <span style={{fontSize:10,color:"#22c55e",marginTop:3,flexShrink:0}}>✓</span>}
               {item.status === "live" && <span className="live-dot" style={{marginTop:5}} />}
             </div>
           ))}
         </div>
-        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.25)",textAlign:"center"}}>
+        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.45)",textAlign:"center"}}>
           This isn't a demo. This is what a real week looks like across three locations when the right people know Bennu exists.
         </p>
       </section>
@@ -136,10 +136,10 @@ export default function SteveDeliverable() {
           <p style={{fontSize:16,fontWeight:800,color:"#fff",lineHeight:1.5,letterSpacing:"-0.01em",marginBottom:12}}>
             Bennu didn't get worse.<br />Austin just forgot to look up.
           </p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.6)",lineHeight:1.8,marginBottom:12}}>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.8,marginBottom:12}}>
             The pandemic broke habits. People found closer options out of necessity and never drifted back. The two audiences who need Bennu most — the late-night crowd that has nowhere to go after last call, and Austin's recovery community that needs a third place that isn't a bar — they exist in massive numbers. They're just not being reached.
           </p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.6)",lineHeight:1.8}}>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.8}}>
             You have three 24-hour locations at strategic points across the city. You serve fair-trade organic beans from Texas Coffee Traders. You have a cold brew recipe so good Steve turned it into a national brand. <span style={{color:"#fff",fontWeight:600}}>This isn't a product problem. It's a discovery problem.</span>
           </p>
         </div>
@@ -157,7 +157,7 @@ export default function SteveDeliverable() {
           </div>
           <div style={{padding:"20px"}}>
             <p style={{fontSize:11,fontWeight:700,color:"#f59e0b",letterSpacing:"0.1em",marginBottom:8}}>🌙 THE LATE NIGHT CROWD</p>
-            <p style={{fontSize:14,color:"rgba(255,255,255,0.7)",lineHeight:1.7}}>
+            <p style={{fontSize:14,color:"rgba(255,255,255,0.92)",lineHeight:1.7}}>
               Every bar and club in Austin closes. Dirty 6th, Rainey Street, 4th Street — thousands of people suddenly awake, mobile, and with nowhere obvious to go. Bennu is one of the only full-service indoor spaces in the city that catches them. They just don't know it yet. The Night Owl agent retargets bar-district audience data in real time. When last call happens, Bennu is already in their feed.
             </p>
           </div>
@@ -171,7 +171,7 @@ export default function SteveDeliverable() {
           </div>
           <div style={{padding:"20px"}}>
             <p style={{fontSize:11,fontWeight:700,color:"#f59e0b",letterSpacing:"0.1em",marginBottom:8}}>🤝 THE RECOVERY COMMUNITY</p>
-            <p style={{fontSize:14,color:"rgba(255,255,255,0.7)",lineHeight:1.7}}>
+            <p style={{fontSize:14,color:"rgba(255,255,255,0.92)",lineHeight:1.7}}>
               Austin's recovery community is one of the largest and most tight-knit in Texas. They meet throughout the week, they support each other, and they are fiercely loyal to businesses that see them. Bennu's roots in community service — BEVO, the nonprofit partnerships, the come-as-you-are atmosphere — this isn't marketing positioning. It's who you've been since 2009. The Fellowship agent makes sure they know it.
             </p>
           </div>
@@ -192,7 +192,7 @@ export default function SteveDeliverable() {
             <span style={{fontSize:22,flexShrink:0,paddingTop:2}}>{a.icon}</span>
             <div>
               <p style={{fontSize:15,fontWeight:800,color:"#fff",marginBottom:4}}>{a.name}</p>
-              <p style={{fontSize:13,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>{a.desc}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>{a.desc}</p>
             </div>
           </div>
         ))}
@@ -209,12 +209,12 @@ export default function SteveDeliverable() {
           ].map((loc, i) => (
             <div key={i} style={{background:"#0c0a0c",border:"1px solid #1e1c1e",borderRadius:12,padding:"16px 14px"}}>
               <p style={{fontSize:11,fontWeight:800,color:"#fff",marginBottom:4}}>{loc.name}</p>
-              <p style={{fontSize:10,color:"rgba(255,255,255,0.3)",marginBottom:8,lineHeight:1.4}}>{loc.addr}</p>
-              <p style={{fontSize:11,color:"rgba(255,255,255,0.45)",lineHeight:1.5}}>{loc.note}</p>
+              <p style={{fontSize:10,color:"rgba(255,255,255,0.5)",marginBottom:8,lineHeight:1.4}}>{loc.addr}</p>
+              <p style={{fontSize:11,color:"rgba(255,255,255,0.72)",lineHeight:1.5}}>{loc.note}</p>
             </div>
           ))}
         </div>
-        <p style={{marginTop:14,fontSize:13,color:"rgba(255,255,255,0.4)",lineHeight:1.7}}>
+        <p style={{marginTop:14,fontSize:13,color:"rgba(255,255,255,0.65)",lineHeight:1.7}}>
           Three coverage zones across the city means the campaign reaches people wherever they are. The Night Owl and Fellowship agents run geo-targeted across all three. One strategy, three multiplied results.
         </p>
       </section>
@@ -224,7 +224,7 @@ export default function SteveDeliverable() {
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:18}}>BENNU'S WEEK. BEFORE AND AFTER.</p>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
           <div style={{background:"#0c0a0c",border:"1px solid #1e1c1e",borderRadius:12,padding:"18px 16px"}}>
-            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.3)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
+            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.5)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
             {[
               "Down 20%, unclear why",
               "Bar crowd doesn't think 'coffee' at 2 AM",
@@ -233,7 +233,7 @@ export default function SteveDeliverable() {
               "Lapsed customers silently drifted",
               "17 years of brand equity, invisible online"
             ].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.4)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.65)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
             ))}
           </div>
           <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.2)",borderRadius:12,padding:"18px 16px"}}>
@@ -246,7 +246,7 @@ export default function SteveDeliverable() {
               "Re-engagement running for all 3 locations",
               "Austin's best-kept secret isn't one anymore"
             ].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.75)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.94)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
             ))}
           </div>
         </div>
@@ -258,7 +258,7 @@ export default function SteveDeliverable() {
           You named your shop after<br />a bird that rises from the ashes.<br />
           <span style={{color:"#f59e0b"}}>Time to rise again.</span>
         </p>
-        <p style={{fontSize:14,color:"rgba(255,255,255,0.45)",marginBottom:32,lineHeight:1.7}}>
+        <p style={{fontSize:14,color:"rgba(255,255,255,0.72)",marginBottom:32,lineHeight:1.7}}>
           You built Chameleon Cold Brew from a single recipe in a small East Austin coffee shop and watched it go national. You know how to build something real. This campaign is just making sure the right people in Austin remember where it all started.
         </p>
         <a className="cta" href="/apply" style={{display:"flex",maxWidth:360,margin:"0 auto",justifyContent:"center"}}>

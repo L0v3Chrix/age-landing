@@ -30,7 +30,7 @@ export default function SamiDeliverable() {
         <Link href="/" style={{fontSize:13,fontWeight:900,letterSpacing:"0.2em",color:"#fff",textDecoration:"none"}}>AGE</Link>
         <div style={{display:"flex",alignItems:"center",gap:7}}>
           <span className="live-dot" />
-          <span style={{fontSize:11,color:"rgba(255,255,255,0.4)",fontWeight:600}}>BUILT FOR SAMI</span>
+          <span style={{fontSize:11,color:"rgba(255,255,255,0.65)",fontWeight:600}}>BUILT FOR SAMI</span>
         </div>
       </nav>
 
@@ -38,14 +38,14 @@ export default function SamiDeliverable() {
       <section style={{padding:"52px 24px 36px",maxWidth:620,margin:"0 auto",animation:"fadeUp 0.65s ease both"}}>
         <div style={{marginBottom:28}}>
           <p style={{fontSize:15,fontWeight:800,color:"#fff"}}>Sami</p>
-          <p style={{fontSize:11,color:"rgba(255,255,255,0.4)",marginTop:2}}>Elevated Wealth Organization · Austin, TX · AI-First Venture Studio</p>
+          <p style={{fontSize:11,color:"rgba(255,255,255,0.65)",marginTop:2}}>Elevated Wealth Organization · Austin, TX · AI-First Venture Studio</p>
         </div>
 
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.22em",color:"#f59e0b",marginBottom:14}}>AGENT GENESIS ENGINE</p>
         <h1 className="h1" style={{fontSize:40,fontWeight:900,lineHeight:1.07,letterSpacing:"-0.03em",color:"#fff",marginBottom:18}}>
           You already think in agents.<br />Now build with them.
         </h1>
-        <p style={{fontSize:16,color:"rgba(255,255,255,0.7)",lineHeight:1.7}}>
+        <p style={{fontSize:16,color:"rgba(255,255,255,0.92)",lineHeight:1.7}}>
           You told us the real problem: <span style={{color:"#fff",fontWeight:600}}>scaling execution without scaling headcount.</span> You've got the strategy, the ideas, the vision. The bottleneck is the fragmented workflow — too many tools, too many manual steps, too many experiments slowed down by execution. Here's what it looks like when the execution layer runs itself.
         </p>
       </section>
@@ -54,7 +54,7 @@ export default function SamiDeliverable() {
       <section style={{padding:"0 24px 40px",maxWidth:620,margin:"0 auto"}}>
         <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:20}}>
           <span className="live-dot" />
-          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.4)"}}>ELEVATED WEALTH ORGANIZATION · AGENT ACTIVITY LOG</p>
+          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.65)"}}>ELEVATED WEALTH ORGANIZATION · AGENT ACTIVITY LOG</p>
         </div>
         <div style={{background:"#0c0a0c",border:"1px solid #1a1a1a",borderRadius:14,overflow:"hidden"}}>
           {feed.map((item, i) => (
@@ -64,19 +64,19 @@ export default function SamiDeliverable() {
               background: item.status === "live" ? "rgba(245,158,11,0.06)" : item.status === "you" ? "rgba(255,255,255,0.02)" : "transparent",
               alignItems:"flex-start"
             }}>
-              <span style={{fontSize:11,color:"rgba(255,255,255,0.25)",minWidth:44,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
+              <span style={{fontSize:11,color:"rgba(255,255,255,0.45)",minWidth:44,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
               <div style={{flex:1}}>
-                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.5)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
+                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.78)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
                   {item.agent.toUpperCase()}
                 </p>
-                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.65)",lineHeight:1.5}}>{item.action}</p>
+                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.88)",lineHeight:1.5}}>{item.action}</p>
               </div>
               {item.status === "done" && <span style={{fontSize:10,color:"#22c55e",marginTop:3,flexShrink:0}}>✓</span>}
               {item.status === "live" && <span className="live-dot" style={{marginTop:5}} />}
             </div>
           ))}
         </div>
-        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.25)",textAlign:"center"}}>
+        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.45)",textAlign:"center"}}>
           Multiple brands. Multiple experiments. One operator. The agents handle the execution layer.
         </p>
       </section>
@@ -88,7 +88,7 @@ export default function SamiDeliverable() {
           <p style={{fontSize:16,fontWeight:800,color:"#fff",lineHeight:1.5,letterSpacing:"-0.01em",marginBottom:10}}>
             You need speed of experimentation.<br />VAs give you speed of execution — on one thing, slowly.
           </p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.6)",lineHeight:1.7}}>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.7}}>
             A venture studio running multiple brands in parallel doesn't have a people problem — it has a coordination problem. Every new brand, offer, or experiment requires the same manual setup: research, funnel, copy, outreach, content. Multiply that by 4 or 5 simultaneous experiments and even a great VA team becomes the bottleneck. Agents don't coordinate — they just execute, in parallel, without being managed.
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function SamiDeliverable() {
             <span style={{fontSize:22,flexShrink:0,paddingTop:2}}>{a.icon}</span>
             <div>
               <p style={{fontSize:15,fontWeight:800,color:"#fff",marginBottom:4}}>{a.name}</p>
-              <p style={{fontSize:13,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>{a.desc}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>{a.desc}</p>
             </div>
           </div>
         ))}
@@ -120,15 +120,15 @@ export default function SamiDeliverable() {
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:18}}>EWO. BEFORE AND AFTER.</p>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
           <div style={{background:"#0c0a0c",border:"1px solid #1e1c1e",borderRadius:12,padding:"18px 16px"}}>
-            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.3)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
+            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.5)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
             {["Manual setup for every new brand","VA coordination slows experiments","Research takes days, not hours","Funnels built one at a time","Content creation competes with building","Kill decisions made on gut, not data"].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.4)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.65)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
             ))}
           </div>
           <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.2)",borderRadius:12,padding:"18px 16px"}}>
             <p style={{fontSize:11,fontWeight:700,color:"#f59e0b",letterSpacing:"0.1em",marginBottom:14}}>AFTER</p>
             {["New brand = new agent stack, live in days","Agents execute in parallel across all brands","Overnight research, morning decisions","Funnels drafted while you sleep","Content engine runs per brand, on schedule","Validator tells you what to scale or kill"].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.75)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.94)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
             ))}
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function SamiDeliverable() {
       <section style={{padding:"0 24px 32px",maxWidth:620,margin:"0 auto"}}>
         <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.15)",borderRadius:14,padding:"24px"}}>
           <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"#f59e0b",marginBottom:12}}>WHY EWO AND AGE ARE THE SAME IDEA</p>
-          <p style={{fontSize:15,color:"rgba(255,255,255,0.75)",lineHeight:1.8}}>
+          <p style={{fontSize:15,color:"rgba(255,255,255,0.94)",lineHeight:1.8}}>
             You're building an AI-first venture studio. We built an AI-first agency to run itself. The architecture is the same — lean operator, agent execution layer, parallel experiments, systems that scale without headcount. You already know this model works. The question is whether you build it yourself over 18 months, or hatch it in 90 days with people who already built it once.
           </p>
         </div>
@@ -150,7 +150,7 @@ export default function SamiDeliverable() {
           4 months into building EWO.<br />
           <span style={{color:"#f59e0b"}}>The execution layer is the<br />last thing you should build manually.</span>
         </p>
-        <p style={{fontSize:14,color:"rgba(255,255,255,0.45)",marginBottom:28,lineHeight:1.6}}>
+        <p style={{fontSize:14,color:"rgba(255,255,255,0.72)",marginBottom:28,lineHeight:1.6}}>
           You've already validated the model. You know what needs to be automated. The agents exist. The only question is how fast you want to move.
         </p>
         <a className="cta" href="/apply" style={{display:"flex",maxWidth:380,margin:"0 auto"}}>

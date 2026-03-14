@@ -12,7 +12,7 @@ export function DossierClient() {
         background: "#0c0a0c",
         border: "1px solid #1e1c1e",
         borderRadius: 10,
-        color: "rgba(255,255,255,0.5)",
+        color: "rgba(255,255,255,0.78)",
         fontSize: 13,
         fontWeight: 700,
         fontFamily: "inherit",
@@ -27,7 +27,7 @@ export function DossierClient() {
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.borderColor = "#1e1c1e";
-        e.currentTarget.style.color = "rgba(255,255,255,0.5)";
+        e.currentTarget.style.color = "rgba(255,255,255,0.78)";
       }}
     >
       Download as PDF

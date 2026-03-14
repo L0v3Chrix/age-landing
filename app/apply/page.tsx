@@ -150,7 +150,7 @@ export default function ApplyQuiz() {
                   key={i}
                   style={{
                     fontSize: 15,
-                    color: i <= loadingStep ? "rgba(255,255,255,0.7)" : "transparent",
+                    color: i <= loadingStep ? "rgba(255,255,255,0.92)" : "transparent",
                     marginBottom: 14,
                     transition: "color 0.5s ease",
                     lineHeight: 1.5,
@@ -168,7 +168,7 @@ export default function ApplyQuiz() {
 
             {error && (
               <div style={{ marginTop: 32, background: "#0c0a0c", border: "1px solid rgba(245,158,11,0.2)", borderRadius: 12, padding: "20px" }}>
-                <p style={{ fontSize: 15, color: "rgba(255,255,255,0.7)", lineHeight: 1.6 }}>{error}</p>
+                <p style={{ fontSize: 15, color: "rgba(255,255,255,0.92)", lineHeight: 1.6 }}>{error}</p>
                 <button
                   onClick={() => { setLoadingPhase(false); setSubmitting(false); setLoadingStep(0); }}
                   className="quiz-btn"
@@ -196,7 +196,7 @@ export default function ApplyQuiz() {
       <div ref={containerRef} style={{ minHeight: "100svh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "48px 24px", maxWidth: 480, margin: "0 auto" }}>
         {/* Back button */}
         {step > 0 && !submitting && (
-          <button onClick={back} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.3)", fontSize: 14, fontWeight: 600, cursor: "pointer", padding: "0 0 24px", textAlign: "left", fontFamily: "inherit" }}>
+          <button onClick={back} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontSize: 14, fontWeight: 600, cursor: "pointer", padding: "0 0 24px", textAlign: "left", fontFamily: "inherit" }}>
             \u2190 Back
           </button>
         )}
@@ -209,7 +209,7 @@ export default function ApplyQuiz() {
             <h1 style={{ fontSize: 34, fontWeight: 900, lineHeight: 1.1, letterSpacing: "-0.03em", color: "#fff", marginBottom: 16 }}>
               Before we show you what's possible, let us do our homework.
             </h1>
-            <p style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, marginBottom: 36 }}>
+            <p style={{ fontSize: 16, color: "rgba(255,255,255,0.85)", lineHeight: 1.7, marginBottom: 36 }}>
               We're going to research your business and build your custom operator blueprint. Answer a few questions. Takes 90 seconds.
             </p>
             <button className="quiz-btn" onClick={next}>Let's do this \u2192</button>
@@ -255,7 +255,7 @@ export default function ApplyQuiz() {
                 onChange={(e) => { setNoWebsite(e.target.checked); if (e.target.checked) setWebsiteUrl(""); }}
                 style={{ accentColor: "#f59e0b", width: 18, height: 18 }}
               />
-              <span style={{ fontSize: 14, color: "rgba(255,255,255,0.5)" }}>No website yet</span>
+              <span style={{ fontSize: 14, color: "rgba(255,255,255,0.78)" }}>No website yet</span>
             </label>
             <button className="quiz-btn" onClick={next} disabled={!websiteUrl && !noWebsite}>Continue \u2192</button>
           </div>
@@ -323,7 +323,7 @@ export default function ApplyQuiz() {
           <div className="fade-up">
             <p className="step-label">STEP 6 OF 8</p>
             <h2 className="step-q">What have you already thrown at this problem?</h2>
-            <p style={{ fontSize: 13, color: "rgba(255,255,255,0.35)", marginBottom: 16 }}>Select all that apply</p>
+            <p style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>Select all that apply</p>
             <div className="card-grid single">
               {TRIED_OPTIONS.map((t) => (
                 <button
@@ -401,7 +401,7 @@ export default function ApplyQuiz() {
             >
               {submitting ? "Building..." : "Build My Dossier \u2192"}
             </button>
-            <p style={{ marginTop: 12, fontSize: 12, color: "rgba(255,255,255,0.2)", textAlign: "center", lineHeight: 1.5 }}>
+            <p style={{ marginTop: 12, fontSize: 12, color: "rgba(255,255,255,0.65)", textAlign: "center", lineHeight: 1.5 }}>
               We'll research your business and build your custom operator blueprint. Ready in under 2 minutes.
             </p>
           </div>

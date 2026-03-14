@@ -14,7 +14,7 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
         <div style={{ minHeight: "100svh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "48px 24px", background: "#080608", textAlign: "center" }}>
           <p style={{ fontSize: 14, fontWeight: 900, letterSpacing: "0.2em", color: "#fff", marginBottom: 32 }}>AGE</p>
           <h1 style={{ fontSize: 32, fontWeight: 900, color: "#fff", marginBottom: 14, letterSpacing: "-0.02em" }}>This dossier has expired.</h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, maxWidth: 380, marginBottom: 36 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.78)", lineHeight: 1.7, maxWidth: 380, marginBottom: 36 }}>
             Dossiers are live for 14 days after generation. If you'd like a fresh one, take the quiz again.
           </p>
           <Link href="/apply" className="cta">Build My Dossier &rarr;</Link>
@@ -38,7 +38,7 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
         <Link href="/" style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.2em", color: "#fff", textDecoration: "none" }}>AGE</Link>
         <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
           <span className="live-dot" />
-          <span style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", fontWeight: 600 }}>
+          <span style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", fontWeight: 600 }}>
             BUILT FOR {lead.firstName.toUpperCase()} {lead.lastName.toUpperCase()} &middot; {lead.businessName.toUpperCase()}
           </span>
         </div>
@@ -52,7 +52,7 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
           <h1 className="h1" style={{ fontSize: 38, fontWeight: 900, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#fff", marginBottom: 14 }}
             dangerouslySetInnerHTML={{ __html: dossier.heroHeadline.replace(/\n/g, "<br />") }}
           />
-          <p style={{ fontSize: 17, color: "rgba(255,255,255,0.65)", lineHeight: 1.6 }}>{dossier.heroSubheadline}</p>
+          <p style={{ fontSize: 17, color: "rgba(255,255,255,0.88)", lineHeight: 1.6 }}>{dossier.heroSubheadline}</p>
         </div>
       </div>
 
@@ -64,12 +64,12 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
           </div>
           <div>
             <p style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{lead.firstName} {lead.lastName}</p>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>
+            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
               {lead.businessName} &middot; {lead.businessType} &middot; Team: {lead.teamSize}
             </p>
           </div>
         </div>
-        <div style={{ fontSize: 16, color: "rgba(255,255,255,0.7)", lineHeight: 1.75 }}
+        <div style={{ fontSize: 16, color: "rgba(255,255,255,0.92)", lineHeight: 1.75 }}
           dangerouslySetInnerHTML={{ __html: formatParagraphs(dossier.introBody) }}
         />
       </section>
@@ -79,7 +79,7 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
         <div style={{ background: "#0c0a0c", border: "1px solid rgba(245,158,11,0.15)", borderRadius: 14, padding: 24 }}>
           <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.16em", color: "#f59e0b", marginBottom: 12 }}>THE DIAGNOSIS</p>
           <p style={{ fontSize: 16, fontWeight: 800, color: "#fff", lineHeight: 1.5, letterSpacing: "-0.01em", marginBottom: 12 }}>{dossier.diagnosis.headline}</p>
-          <div style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", lineHeight: 1.8 }}
+          <div style={{ fontSize: 14, color: "rgba(255,255,255,0.85)", lineHeight: 1.8 }}
             dangerouslySetInnerHTML={{ __html: formatParagraphs(dossier.diagnosis.body) }}
           />
         </div>
@@ -89,7 +89,7 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
       <section style={{ padding: "8px 24px 40px", maxWidth: 620, margin: "0 auto" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 20 }}>
           <span className="live-dot" />
-          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.16em", color: "rgba(255,255,255,0.4)" }}>
+          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.16em", color: "rgba(255,255,255,0.65)" }}>
             AGENT ACTIVITY LOG &mdash; {lead.businessName.toUpperCase()}
           </p>
         </div>
@@ -101,12 +101,12 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
               background: item.status === "live" ? "rgba(245,158,11,0.06)" : item.status === "you" ? "rgba(255,255,255,0.02)" : "transparent",
               alignItems: "flex-start",
             }}>
-              <span style={{ fontSize: 11, color: "rgba(255,255,255,0.25)", minWidth: 44, paddingTop: 2, flexShrink: 0, fontVariantNumeric: "tabular-nums" }}>{item.time}</span>
+              <span style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", minWidth: 44, paddingTop: 2, flexShrink: 0, fontVariantNumeric: "tabular-nums" }}>{item.time}</span>
               <div style={{ flex: 1 }}>
-                <p style={{ fontSize: 11, fontWeight: 700, color: item.status === "you" ? "rgba(255,255,255,0.5)" : "#f59e0b", letterSpacing: "0.06em", marginBottom: 3 }}>
+                <p style={{ fontSize: 11, fontWeight: 700, color: item.status === "you" ? "rgba(255,255,255,0.78)" : "#f59e0b", letterSpacing: "0.06em", marginBottom: 3 }}>
                   {item.agent.toUpperCase()}
                 </p>
-                <p style={{ fontSize: 13, color: item.status === "live" ? "#fff" : "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>{item.action}</p>
+                <p style={{ fontSize: 13, color: item.status === "live" ? "#fff" : "rgba(255,255,255,0.88)", lineHeight: 1.5 }}>{item.action}</p>
               </div>
               {item.status === "done" && <span style={{ fontSize: 10, color: "#22c55e", marginTop: 3, flexShrink: 0 }}>&check;</span>}
               {item.status === "live" && <span className="live-dot" style={{ marginTop: 5 }} />}
@@ -126,7 +126,7 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
             <div>
               <p style={{ fontSize: 15, fontWeight: 800, color: "#fff", marginBottom: 2 }}>{a.name}</p>
               <p style={{ fontSize: 12, color: "#f59e0b", marginBottom: 4 }}>{a.role}</p>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", lineHeight: 1.65 }}>{a.detail}</p>
+              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.65 }}>{a.detail}</p>
             </div>
           </div>
         ))}
@@ -139,15 +139,15 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           <div style={{ background: "#0c0a0c", border: "1px solid #1e1c1e", borderRadius: 12, padding: "18px 16px" }}>
-            <p style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.3)", letterSpacing: "0.1em", marginBottom: 14 }}>BEFORE</p>
+            <p style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", marginBottom: 14 }}>BEFORE</p>
             {dossier.before.map((t, i) => (
-              <p key={i} style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", lineHeight: 1.6, marginBottom: 4 }}>&mdash; {t}</p>
+              <p key={i} style={{ fontSize: 12, color: "rgba(255,255,255,0.65)", lineHeight: 1.6, marginBottom: 4 }}>&mdash; {t}</p>
             ))}
           </div>
           <div style={{ background: "#0c0a0c", border: "1px solid rgba(245,158,11,0.2)", borderRadius: 12, padding: "18px 16px" }}>
             <p style={{ fontSize: 11, fontWeight: 700, color: "#f59e0b", letterSpacing: "0.1em", marginBottom: 14 }}>AFTER</p>
             {dossier.after.map((t, i) => (
-              <p key={i} style={{ fontSize: 12, color: "rgba(255,255,255,0.75)", lineHeight: 1.6, marginBottom: 4 }}>&check; {t}</p>
+              <p key={i} style={{ fontSize: 12, color: "rgba(255,255,255,0.94)", lineHeight: 1.6, marginBottom: 4 }}>&check; {t}</p>
             ))}
           </div>
         </div>
@@ -158,7 +158,7 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
         <p style={{ fontSize: "clamp(22px, 4vw, 32px)", fontWeight: 900, lineHeight: 1.15, letterSpacing: "-0.025em", color: "#fff", marginBottom: 12 }}
           dangerouslySetInnerHTML={{ __html: dossier.closingHeadline.replace(/\n/g, "<br />") }}
         />
-        <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", marginBottom: 32, lineHeight: 1.7 }}>{dossier.closingBody}</p>
+        <p style={{ fontSize: 14, color: "rgba(255,255,255,0.72)", marginBottom: 32, lineHeight: 1.7 }}>{dossier.closingBody}</p>
         <Link href="/apply" className="cta" style={{ display: "flex", maxWidth: 420, margin: "0 auto", justifyContent: "center" }}>
           {dossier.ctaText}
         </Link>
@@ -166,7 +166,7 @@ export default async function DossierPage({ params }: { params: Promise<{ token:
 
       {/* FOOTER */}
       <div style={{ borderTop: "1px solid #141414", padding: "28px 24px", textAlign: "center" }}>
-        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.2)", lineHeight: 1.6 }}>
+        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.65)", lineHeight: 1.6 }}>
           Built for {lead.firstName} {lead.lastName} &middot; {lead.businessName} &middot; Generated {createdDate} &middot; Expires {expiryDate}
         </p>
       </div>

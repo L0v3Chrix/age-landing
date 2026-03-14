@@ -124,7 +124,7 @@ export default function YayaDeliverable() {
         .cta { display:inline-flex;align-items:center;justify-content:center;background:#f59e0b;color:#080608;font-size:17px;font-weight:900;font-family:inherit;padding:16px 36px;border-radius:10px;text-decoration:none;transition:transform 0.15s,background 0.15s; }
         .cta:hover { transform:translateY(-2px);background:#fbbf24; }
         .live-dot { width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;animation:blink 1.2s infinite;flex-shrink:0; }
-        .mini-nav a { color:rgba(255,255,255,0.5);text-decoration:none;font-size:11px;font-weight:700;letter-spacing:0.12em;transition:color 0.15s; }
+        .mini-nav a { color:rgba(255,255,255,0.78);text-decoration:none;font-size:11px;font-weight:700;letter-spacing:0.12em;transition:color 0.15s; }
         .mini-nav a:hover { color:#f59e0b; }
         .check { color:#22c55e;margin-right:8px;flex-shrink:0; }
         @media(max-width:640px) { .cta { width:100%; } .h1 { font-size:28px !important; } .mini-nav { gap:12px !important; flex-wrap:wrap; } }
@@ -149,14 +149,14 @@ export default function YayaDeliverable() {
       <section style={{padding:"60px 24px 44px",maxWidth:640,margin:"0 auto",animation:"fadeUp 0.65s ease both"}}>
         <div style={{marginBottom:28}}>
           <p style={{fontSize:15,fontWeight:800,color:"#fff"}}>YaYa</p>
-          <p style={{fontSize:11,color:"rgba(255,255,255,0.4)",marginTop:2}}>Yaya&apos;s Baskets · LOVe Lab Experiments · Orlando, FL</p>
+          <p style={{fontSize:11,color:"rgba(255,255,255,0.65)",marginTop:2}}>Yaya&apos;s Baskets · LOVe Lab Experiments · Orlando, FL</p>
         </div>
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.22em",color:"#f59e0b",marginBottom:14}}>AGENT GENESIS ENGINE</p>
         <h1 className="h1" style={{fontSize:42,fontWeight:900,lineHeight:1.07,letterSpacing:"-0.03em",color:"#fff",marginBottom:20}}>
           You built two things<br />worth owning.<br />
           <span style={{color:"#f59e0b"}}>Now let&apos;s make them<br />work while you sleep.</span>
         </h1>
-        <p style={{fontSize:16,color:"rgba(255,255,255,0.7)",lineHeight:1.75}}>
+        <p style={{fontSize:16,color:"rgba(255,255,255,0.92)",lineHeight:1.75}}>
           You spent nearly a year building your Block system. You launched two websites. You had real customers, real feedback, and real results — and then hit a wall called <span style={{color:"#fff",fontWeight:600}}>marketing</span>. This page covers everything: the agents we&apos;d build for both businesses, the exact hardware to buy, a step-by-step setup guide, and honest pricing math. Read it at your own pace. Ask questions when you&apos;re ready.
         </p>
       </section>
@@ -165,7 +165,7 @@ export default function YayaDeliverable() {
       <section style={{padding:"0 24px 48px",maxWidth:640,margin:"0 auto"}}>
         <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:20}}>
           <span className="live-dot" />
-          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.4)"}}>AGENT ACTIVITY — YAYA&apos;S BASKETS + LOVe LAB</p>
+          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.65)"}}>AGENT ACTIVITY — YAYA&apos;S BASKETS + LOVe LAB</p>
         </div>
         <div style={{background:"#0c0a0c",border:"1px solid #1a1a1a",borderRadius:14,overflow:"hidden"}}>
           {feed.map((item, i) => (
@@ -175,15 +175,15 @@ export default function YayaDeliverable() {
               background: item.status === "live" ? "rgba(245,158,11,0.06)" : item.status === "you" ? "rgba(255,255,255,0.02)" : "transparent",
               alignItems:"flex-start"
             }}>
-              <span style={{fontSize:11,color:"rgba(255,255,255,0.25)",minWidth:52,paddingTop:2,flexShrink:0}}>{item.time}</span>
+              <span style={{fontSize:11,color:"rgba(255,255,255,0.45)",minWidth:52,paddingTop:2,flexShrink:0}}>{item.time}</span>
               <div style={{flex:1}}>
                 <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:3}}>
-                  <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.5)":"#f59e0b",letterSpacing:"0.06em"}}>
+                  <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.78)":"#f59e0b",letterSpacing:"0.06em"}}>
                     {item.agent.toUpperCase()}
                   </p>
-                  <span style={{fontSize:9,color:"rgba(255,255,255,0.2)",fontWeight:600,letterSpacing:"0.08em"}}>{item.biz.toUpperCase()}</span>
+                  <span style={{fontSize:9,color:"rgba(255,255,255,0.65)",fontWeight:600,letterSpacing:"0.08em"}}>{item.biz.toUpperCase()}</span>
                 </div>
-                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.65)",lineHeight:1.55}}>{item.action}</p>
+                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.88)",lineHeight:1.55}}>{item.action}</p>
               </div>
               {item.status === "done" && <span style={{fontSize:10,color:"#22c55e",marginTop:3,flexShrink:0}}>✓</span>}
               {item.status === "live" && <span className="live-dot" style={{marginTop:5}} />}
@@ -196,12 +196,12 @@ export default function YayaDeliverable() {
       <section id="yayas" style={{padding:"0 24px 48px",maxWidth:640,margin:"0 auto"}}>
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:6}}>BUSINESS ONE</p>
         <h2 style={{fontSize:28,fontWeight:900,letterSpacing:"-0.02em",color:"#fff",marginBottom:8}}>Yaya&apos;s Baskets</h2>
-        <p style={{fontSize:14,color:"rgba(255,255,255,0.5)",marginBottom:24}}>6 families. $175–200/week. Sold before you start cooking.</p>
+        <p style={{fontSize:14,color:"rgba(255,255,255,0.78)",marginBottom:24}}>6 families. $175–200/week. Sold before you start cooking.</p>
 
         <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.15)",borderRadius:14,padding:"22px",marginBottom:24}}>
           <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"#f59e0b",marginBottom:12}}>THE DIAGNOSIS</p>
           <p style={{fontSize:15,fontWeight:800,color:"#fff",lineHeight:1.5,marginBottom:10}}>You have something people want. They just don&apos;t know it exists yet.</p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.6)",lineHeight:1.7}}>8 texts and your daughter&apos;s occasional Facebook post means your baskets fill based on luck, not consistency. The fix isn&apos;t ads or going viral — it&apos;s showing up in the right local groups every single week, reminding past customers before they forget, and capturing the people who were too late so they&apos;re first in line next week.</p>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.7}}>8 texts and your daughter&apos;s occasional Facebook post means your baskets fill based on luck, not consistency. The fix isn&apos;t ads or going viral — it&apos;s showing up in the right local groups every single week, reminding past customers before they forget, and capturing the people who were too late so they&apos;re first in line next week.</p>
         </div>
 
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:18}}>YOUR AGENT TEAM</p>
@@ -210,22 +210,22 @@ export default function YayaDeliverable() {
             <span style={{fontSize:24,flexShrink:0,paddingTop:2}}>{a.icon}</span>
             <div>
               <p style={{fontSize:15,fontWeight:800,color:"#fff",marginBottom:5}}>{a.name}</p>
-              <p style={{fontSize:13,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>{a.desc}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>{a.desc}</p>
             </div>
           </div>
         ))}
 
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginTop:28}}>
           <div style={{background:"#0c0a0c",border:"1px solid #1e1c1e",borderRadius:12,padding:"18px 16px"}}>
-            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.3)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
+            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.5)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
             {["Text 8 people and hope","Rely on your daughter to post","Forget who ordered last week","Lose latecomers forever","Some weeks fill, some don't","Marketing = another thing on your list"].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.4)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.65)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
             ))}
           </div>
           <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.2)",borderRadius:12,padding:"18px 16px"}}>
             <p style={{fontSize:11,fontWeight:700,color:"#f59e0b",letterSpacing:"0.1em",marginBottom:14}}>AFTER</p>
             {["Local groups posted every week","Regulars reminded automatically","Waitlist captures the latecomers","Basket stories build loyal fans","6 slots full before Wednesday","Marketing runs while you cook"].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.75)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.94)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
             ))}
           </div>
         </div>
@@ -235,7 +235,7 @@ export default function YayaDeliverable() {
       <section id="lovelabs" style={{padding:"0 24px 48px",maxWidth:640,margin:"0 auto"}}>
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:6}}>BUSINESS TWO</p>
         <h2 style={{fontSize:28,fontWeight:900,letterSpacing:"-0.02em",color:"#fff",marginBottom:8}}>LOVe Lab Experiments</h2>
-        <p style={{fontSize:14,color:"rgba(255,255,255,0.5)",marginBottom:24}}>Personalized couples experiences. Powered by your Block library. Scalable without you doing more work.</p>
+        <p style={{fontSize:14,color:"rgba(255,255,255,0.78)",marginBottom:24}}>Personalized couples experiences. Powered by your Block library. Scalable without you doing more work.</p>
 
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:18}}>YOUR AGENT TEAM</p>
         {lovelabs_agents.map((a,i) => (
@@ -243,7 +243,7 @@ export default function YayaDeliverable() {
             <span style={{fontSize:24,flexShrink:0,paddingTop:2}}>{a.icon}</span>
             <div>
               <p style={{fontSize:15,fontWeight:800,color:"#fff",marginBottom:5}}>{a.name}</p>
-              <p style={{fontSize:13,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>{a.desc}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>{a.desc}</p>
             </div>
           </div>
         ))}
@@ -259,11 +259,11 @@ export default function YayaDeliverable() {
             100 modular blocks. Energy tones. Emotional tones. Customer responses dictate the assembly.<br/>
             <span style={{color:"#f59e0b"}}>You didn&apos;t build a hobby project. You built a content architecture system.</span>
           </p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.65)",lineHeight:1.75,marginBottom:14}}>Companies pay consultants $50,000 to build what you built by yourself over a year. The reason AI gave you inconsistent results wasn&apos;t that AI doesn&apos;t work — it&apos;s that raw prompts with no guardrails produce random output. Your Block system IS the guardrails. You were just missing an engine that could actually use them.</p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.65)",lineHeight:1.75}}>You weren&apos;t wrong. You were ahead of the tools available to you at the time.</p>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.88)",lineHeight:1.75,marginBottom:14}}>Companies pay consultants $50,000 to build what you built by yourself over a year. The reason AI gave you inconsistent results wasn&apos;t that AI doesn&apos;t work — it&apos;s that raw prompts with no guardrails produce random output. Your Block system IS the guardrails. You were just missing an engine that could actually use them.</p>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.88)",lineHeight:1.75}}>You weren&apos;t wrong. You were ahead of the tools available to you at the time.</p>
         </div>
 
-        <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.14em",color:"rgba(255,255,255,0.4)",marginBottom:16}}>HOW IT FLOWS WITH AGE</p>
+        <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.14em",color:"rgba(255,255,255,0.65)",marginBottom:16}}>HOW IT FLOWS WITH AGE</p>
         {[
           { step:"01", label:"Customer Quiz", desc:"The Matchmaker sends 6-8 questions: energy level, relationship goals, comfort zones, love languages, what they want more of." },
           { step:"02", label:"Block Selection", desc:"Quiz responses are scored. The agent selects the right subset of your 100 blocks — maybe 7-12 blocks for a 3-day experience — based on the couple's profile." },
@@ -274,7 +274,7 @@ export default function YayaDeliverable() {
             <span style={{fontSize:20,fontWeight:900,color:"rgba(245,158,11,0.4)",minWidth:28,flexShrink:0}}>{s.step}</span>
             <div>
               <p style={{fontSize:15,fontWeight:800,color:"#fff",marginBottom:4}}>{s.label}</p>
-              <p style={{fontSize:13,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>{s.desc}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>{s.desc}</p>
             </div>
           </div>
         ))}
@@ -288,7 +288,7 @@ export default function YayaDeliverable() {
         <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.3)",borderRadius:14,padding:"28px",marginBottom:20}}>
           <p style={{fontSize:11,fontWeight:700,letterSpacing:"0.14em",color:"#f59e0b",marginBottom:8}}>THE RECOMMENDATION</p>
           <p style={{fontSize:24,fontWeight:900,color:"#fff",letterSpacing:"-0.02em",marginBottom:4}}>Mac Mini M4</p>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.6)",marginBottom:16}}>16GB RAM · 512GB SSD · <span style={{color:"#f59e0b",fontWeight:700}}>$799</span></p>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.85)",marginBottom:16}}>16GB RAM · 512GB SSD · <span style={{color:"#f59e0b",fontWeight:700}}>$799</span></p>
           <a href="https://apple.com/shop/buy-mac/mac-mini" target="_blank" rel="noopener noreferrer" style={{display:"inline-block",padding:"10px 20px",background:"rgba(245,158,11,0.15)",border:"1px solid rgba(245,158,11,0.3)",borderRadius:8,color:"#f59e0b",fontSize:12,fontWeight:700,textDecoration:"none",marginBottom:20}}>Buy at apple.com/shop/buy-mac/mac-mini →</a>
           <div style={{display:"flex",flexDirection:"column",gap:10}}>
             {[
@@ -297,20 +297,20 @@ export default function YayaDeliverable() {
               { q:"What else do you need?", a:"Just power (included) and a monitor — which you may already have. Any HDMI monitor works. Keyboard and mouse too, or buy Apple's for ~$150 bundle." },
             ].map((item,i) => (
               <div key={i} style={{borderTop:"1px solid #1e1c1e",paddingTop:10}}>
-                <p style={{fontSize:12,fontWeight:700,color:"rgba(255,255,255,0.7)",marginBottom:4}}>{item.q}</p>
-                <p style={{fontSize:12,color:"rgba(255,255,255,0.45)",lineHeight:1.6}}>{item.a}</p>
+                <p style={{fontSize:12,fontWeight:700,color:"rgba(255,255,255,0.92)",marginBottom:4}}>{item.q}</p>
+                <p style={{fontSize:12,color:"rgba(255,255,255,0.72)",lineHeight:1.6}}>{item.a}</p>
               </div>
             ))}
           </div>
         </div>
-        <p style={{fontSize:12,color:"rgba(255,255,255,0.25)",textAlign:"center"}}>Before you buy — text Chrix and tell him what computer you already have. If you have a Mac from 2020 or later, you may not need new hardware at all.</p>
+        <p style={{fontSize:12,color:"rgba(255,255,255,0.45)",textAlign:"center"}}>Before you buy — text Chrix and tell him what computer you already have. If you have a Mac from 2020 or later, you may not need new hardware at all.</p>
       </section>
 
       {/* SETUP GUIDE */}
       <section id="setup" style={{padding:"0 24px 48px",maxWidth:640,margin:"0 auto"}}>
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:12}}>STEP BY STEP</p>
         <h2 style={{fontSize:28,fontWeight:900,letterSpacing:"-0.02em",color:"#fff",marginBottom:8}}>Setup Guide</h2>
-        <p style={{fontSize:14,color:"rgba(255,255,255,0.45)",marginBottom:32}}>No coding. No IT background needed. Just follow the phases.</p>
+        <p style={{fontSize:14,color:"rgba(255,255,255,0.72)",marginBottom:32}}>No coding. No IT background needed. Just follow the phases.</p>
 
         {setupPhases.map((phase, pi) => (
           <div key={pi} style={{marginBottom:28,background:"#0c0a0c",border:"1px solid #1a1a1a",borderRadius:14,padding:"22px"}}>
@@ -321,7 +321,7 @@ export default function YayaDeliverable() {
             {phase.steps.map((step, si) => (
               <div key={si} style={{display:"flex",alignItems:"flex-start",gap:10,marginBottom:10}}>
                 <span className="check">☐</span>
-                <p style={{fontSize:13,color:"rgba(255,255,255,0.65)",lineHeight:1.6}}>{step}</p>
+                <p style={{fontSize:13,color:"rgba(255,255,255,0.88)",lineHeight:1.6}}>{step}</p>
               </div>
             ))}
           </div>
@@ -332,7 +332,7 @@ export default function YayaDeliverable() {
       <section id="pricing" style={{padding:"0 24px 48px",maxWidth:640,margin:"0 auto"}}>
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:12}}>WHAT IT COSTS</p>
         <h2 style={{fontSize:28,fontWeight:900,letterSpacing:"-0.02em",color:"#fff",marginBottom:8}}>Pricing</h2>
-        <p style={{fontSize:14,color:"rgba(255,255,255,0.45)",marginBottom:28}}>Line by line. No surprises.</p>
+        <p style={{fontSize:14,color:"rgba(255,255,255,0.72)",marginBottom:28}}>Line by line. No surprises.</p>
 
         <div style={{background:"#0c0a0c",border:"1px solid #1a1a1a",borderRadius:14,overflow:"hidden",marginBottom:24}}>
           {[
@@ -346,7 +346,7 @@ export default function YayaDeliverable() {
             <div key={i} style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",padding:"14px 20px",borderBottom:"1px solid #141414",gap:12}}>
               <div style={{flex:1}}>
                 <p style={{fontSize:14,fontWeight:700,color:"#fff",marginBottom:3}}>{row.label}</p>
-                <p style={{fontSize:11,color:"rgba(255,255,255,0.35)",lineHeight:1.5}}>{row.note}</p>
+                <p style={{fontSize:11,color:"rgba(255,255,255,0.55)",lineHeight:1.5}}>{row.note}</p>
               </div>
               <p style={{fontSize:14,fontWeight:900,color:"#f59e0b",flexShrink:0}}>{row.amount}</p>
             </div>
@@ -364,11 +364,11 @@ export default function YayaDeliverable() {
             ["Break-even point", "2 baskets/week consistently"],
           ].map(([label, val], i) => (
             <div key={i} style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:"1px solid rgba(245,158,11,0.1)"}}>
-              <p style={{fontSize:13,color:"rgba(255,255,255,0.6)"}}>{label}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.85)"}}>{label}</p>
               <p style={{fontSize:13,fontWeight:700,color:"#fff"}}>{val}</p>
             </div>
           ))}
-          <p style={{fontSize:12,color:"rgba(255,255,255,0.4)",marginTop:14,lineHeight:1.6}}>Food cost estimate is rough — yours may be higher or lower. The point: even with real expenses, 6 baskets/week clears your costs and then some. LOVe Lab subscription revenue stacks on top of this.</p>
+          <p style={{fontSize:12,color:"rgba(255,255,255,0.65)",marginTop:14,lineHeight:1.6}}>Food cost estimate is rough — yours may be higher or lower. The point: even with real expenses, 6 baskets/week clears your costs and then some. LOVe Lab subscription revenue stacks on top of this.</p>
         </div>
       </section>
 
@@ -388,7 +388,7 @@ export default function YayaDeliverable() {
         ].map((item, i) => (
           <div key={i} style={{display:"flex",gap:20,padding:"16px 0",borderBottom:"1px solid #141414",alignItems:"flex-start"}}>
             <span style={{fontSize:11,fontWeight:700,color:"#f59e0b",minWidth:70,flexShrink:0,paddingTop:2}}>{item.when}</span>
-            <p style={{fontSize:14,color:"rgba(255,255,255,0.7)",lineHeight:1.65}}>{item.what}</p>
+            <p style={{fontSize:14,color:"rgba(255,255,255,0.92)",lineHeight:1.65}}>{item.what}</p>
           </div>
         ))}
       </section>
@@ -401,7 +401,7 @@ export default function YayaDeliverable() {
         {faqs.map((faq, i) => (
           <div key={i} style={{padding:"20px 0",borderBottom:"1px solid #141414"}}>
             <p style={{fontSize:15,fontWeight:800,color:"#fff",marginBottom:8}}>{faq.q}</p>
-            <p style={{fontSize:14,color:"rgba(255,255,255,0.6)",lineHeight:1.7}}>{faq.a}</p>
+            <p style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.7}}>{faq.a}</p>
           </div>
         ))}
       </section>
@@ -412,10 +412,10 @@ export default function YayaDeliverable() {
           You didn&apos;t quit.<br/>
           <span style={{color:"#f59e0b"}}>Let&apos;s put an engine on what you built.</span>
         </p>
-        <p style={{fontSize:15,color:"rgba(255,255,255,0.5)",marginBottom:10,lineHeight:1.7}}>
+        <p style={{fontSize:15,color:"rgba(255,255,255,0.78)",marginBottom:10,lineHeight:1.7}}>
           You spent a year building something most people would have given up on in a week. The Block system, the two websites, the real customers — that&apos;s not a hobby. That&apos;s a foundation.
         </p>
-        <p style={{fontSize:15,color:"rgba(255,255,255,0.5)",marginBottom:32,lineHeight:1.7}}>
+        <p style={{fontSize:15,color:"rgba(255,255,255,0.78)",marginBottom:32,lineHeight:1.7}}>
           When you&apos;re ready, hit the button below. Or just text Chrix. Either works.
         </p>
         <a className="cta" href="/apply" style={{display:"flex",maxWidth:380,margin:"0 auto",justifyContent:"center"}}>

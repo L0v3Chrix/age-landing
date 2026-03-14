@@ -30,7 +30,7 @@ export default function JustinDeliverable() {
         <Link href="/" style={{fontSize:13,fontWeight:900,letterSpacing:"0.2em",color:"#fff",textDecoration:"none"}}>AGE</Link>
         <div style={{display:"flex",alignItems:"center",gap:7}}>
           <span className="live-dot" />
-          <span style={{fontSize:11,color:"rgba(255,255,255,0.4)",fontWeight:600}}>BUILT FOR JUSTIN SIMS</span>
+          <span style={{fontSize:11,color:"rgba(255,255,255,0.65)",fontWeight:600}}>BUILT FOR JUSTIN SIMS</span>
         </div>
       </nav>
 
@@ -38,14 +38,14 @@ export default function JustinDeliverable() {
       <section style={{padding:"52px 24px 36px",maxWidth:620,margin:"0 auto",animation:"fadeUp 0.65s ease both"}}>
         <div style={{marginBottom:28}}>
           <p style={{fontSize:15,fontWeight:800,color:"#fff"}}>Justin Sims</p>
-          <p style={{fontSize:11,color:"rgba(255,255,255,0.4)",marginTop:2}}>SimsCo Mechanical & Plumbing · Austin, TX · 7 years</p>
+          <p style={{fontSize:11,color:"rgba(255,255,255,0.65)",marginTop:2}}>SimsCo Mechanical & Plumbing · Austin, TX · 7 years</p>
         </div>
 
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.22em",color:"#f59e0b",marginBottom:14}}>AGENT GENESIS ENGINE</p>
         <h1 className="h1" style={{fontSize:40,fontWeight:900,lineHeight:1.07,letterSpacing:"-0.03em",color:"#fff",marginBottom:18}}>
           This is what Monday looks like<br />when your phone rings itself.
         </h1>
-        <p style={{fontSize:16,color:"rgba(255,255,255,0.7)",lineHeight:1.7}}>
+        <p style={{fontSize:16,color:"rgba(255,255,255,0.92)",lineHeight:1.7}}>
           You built SimsCo on <span style={{color:"#fff",fontWeight:600}}>word of mouth, Facebook, and showing up.</span> That got you to $50–75k months. Here's what happens when you add agents that work the leads while you work the jobs.
         </p>
       </section>
@@ -54,7 +54,7 @@ export default function JustinDeliverable() {
       <section style={{padding:"0 24px 40px",maxWidth:620,margin:"0 auto"}}>
         <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:20}}>
           <span className="live-dot" />
-          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.4)"}}>SIMSCO MECHANICAL & PLUMBING · AGENT ACTIVITY LOG</p>
+          <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.16em",color:"rgba(255,255,255,0.65)"}}>SIMSCO MECHANICAL & PLUMBING · AGENT ACTIVITY LOG</p>
         </div>
         <div style={{background:"#0c0a0c",border:"1px solid #1a1a1a",borderRadius:14,overflow:"hidden"}}>
           {feed.map((item, i) => (
@@ -64,19 +64,19 @@ export default function JustinDeliverable() {
               background: item.status === "live" ? "rgba(245,158,11,0.06)" : item.status === "you" ? "rgba(255,255,255,0.02)" : "transparent",
               alignItems:"flex-start"
             }}>
-              <span style={{fontSize:11,color:"rgba(255,255,255,0.25)",minWidth:44,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
+              <span style={{fontSize:11,color:"rgba(255,255,255,0.45)",minWidth:44,paddingTop:2,flexShrink:0,fontVariantNumeric:"tabular-nums"}}>{item.time}</span>
               <div style={{flex:1}}>
-                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.5)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
+                <p style={{fontSize:11,fontWeight:700,color:item.status==="live"?"#f59e0b":item.status==="you"?"rgba(255,255,255,0.78)":"#f59e0b",letterSpacing:"0.06em",marginBottom:3}}>
                   {item.agent.toUpperCase()}
                 </p>
-                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.65)",lineHeight:1.5}}>{item.action}</p>
+                <p style={{fontSize:13,color:item.status==="live"?"#fff":"rgba(255,255,255,0.88)",lineHeight:1.5}}>{item.action}</p>
               </div>
               {item.status === "done" && <span style={{fontSize:10,color:"#22c55e",marginTop:3,flexShrink:0}}>✓</span>}
               {item.status === "live" && <span className="live-dot" style={{marginTop:5}} />}
             </div>
           ))}
         </div>
-        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.25)",textAlign:"center"}}>
+        <p style={{marginTop:12,fontSize:12,color:"rgba(255,255,255,0.45)",textAlign:"center"}}>
           This isn't a demo. This is what a real Monday looks like for a plumber with agents on the clock.
         </p>
       </section>
@@ -88,7 +88,7 @@ export default function JustinDeliverable() {
           <p style={{fontSize:16,fontWeight:800,color:"#fff",lineHeight:1.5,letterSpacing:"-0.01em",marginBottom:10}}>
             Word of mouth works — until it doesn't.<br />You can't scale what only happens when you're not busy.
           </p>
-          <p style={{fontSize:14,color:"rgba(255,255,255,0.6)",lineHeight:1.7}}>
+          <p style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.7}}>
             When you're slammed, you're not following up. When you're slow, you're scrambling. The agents break that cycle — they follow up on quotes, ask for reviews after every job, and post content on Facebook and Nextdoor whether you're on a job site or at church. The phone keeps ringing on both kinds of days.
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function JustinDeliverable() {
             <span style={{fontSize:22,flexShrink:0,paddingTop:2}}>{a.icon}</span>
             <div>
               <p style={{fontSize:15,fontWeight:800,color:"#fff",marginBottom:4}}>{a.name}</p>
-              <p style={{fontSize:13,color:"rgba(255,255,255,0.55)",lineHeight:1.65}}>{a.desc}</p>
+              <p style={{fontSize:13,color:"rgba(255,255,255,0.82)",lineHeight:1.65}}>{a.desc}</p>
             </div>
           </div>
         ))}
@@ -119,15 +119,15 @@ export default function JustinDeliverable() {
         <p style={{fontSize:10,fontWeight:700,letterSpacing:"0.2em",color:"#f59e0b",marginBottom:18}}>YOUR MONDAY. BEFORE AND AFTER.</p>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
           <div style={{background:"#0c0a0c",border:"1px solid #1e1c1e",borderRadius:12,padding:"18px 16px"}}>
-            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.3)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
+            <p style={{fontSize:11,fontWeight:700,color:"rgba(255,255,255,0.5)",letterSpacing:"0.1em",marginBottom:14}}>BEFORE</p>
             {["Chase quotes that went quiet","Manually ask for Google reviews","Post on Facebook when you have time","Miss calls while on a job","Hope referrals come in on their own","Hustle harder on slow weeks"].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.4)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.65)",lineHeight:1.6,marginBottom:4}}>— {t}</p>
             ))}
           </div>
           <div style={{background:"#0c0a0c",border:"1px solid rgba(245,158,11,0.2)",borderRadius:12,padding:"18px 16px"}}>
             <p style={{fontSize:11,fontWeight:700,color:"#f59e0b",letterSpacing:"0.1em",marginBottom:14}}>AFTER</p>
             {["Follow-ups run automatically","Reviews requested after every job","Content posts on schedule","Leads routed while you're on-site","Referral sequences fire on day 3","Pipeline stays full whether you're busy or slow"].map((t,i) => (
-              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.75)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
+              <p key={i} style={{fontSize:12,color:"rgba(255,255,255,0.94)",lineHeight:1.6,marginBottom:4}}>✓ {t}</p>
             ))}
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function JustinDeliverable() {
           7 years building SimsCo on hustle.<br />
           <span style={{color:"#f59e0b"}}>Now let the agents<br />do the hustling.</span>
         </p>
-        <p style={{fontSize:14,color:"rgba(255,255,255,0.45)",marginBottom:28,lineHeight:1.6}}>
+        <p style={{fontSize:14,color:"rgba(255,255,255,0.72)",marginBottom:28,lineHeight:1.6}}>
           These agents are built for plumbers. Not templates — built for SimsCo, Austin, the way you work. The only question is whether they're running for you or your competition.
         </p>
         <a className="cta" href="/apply" style={{display:"flex",maxWidth:360,margin:"0 auto"}}>
